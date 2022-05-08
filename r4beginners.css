@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 /* base variables */
 
 /* Edit the CSS properties in this file to create a custom
@@ -17,7 +18,7 @@ html {
   /*-- Main font sizes --*/
   --title-size:      40px;
   --body-size:       18px;
-  --code-size:       16px;
+  --code-size:       18px;
   --aside-size:      12px;
   --fig-cap-size:    13px;
   /*-- Main font colors --*/
@@ -27,10 +28,10 @@ html {
   --aside-color:     #05204A;
   --fig-cap-color:   #05204A;
   /*-- Specify custom fonts ~~~ must be imported above   --*/
-  --heading-font:    sans-serif;
+  --heading-font:    Itim;
   --mono-font:       monospace;
-  --body-font:       sans-serif;
-  --navbar-font:     sans-serif;  /* websites + blogs only */
+  --body-font:       Nunito;
+  --navbar-font:     Itim;  /* websites + blogs only */
 }
 
 /*-- ARTICLE METADATA --*/
@@ -59,9 +60,9 @@ d-appendix {
 /* These properties only apply to Distill sites and blogs  */
 
 .distill-site-header {
-  --title-size:       24px;
+  --title-size:       26px;
   --text-color:       rgba(255, 255, 255, 0.8);
-  --text-size:        24px;
+  --text-size:        26px;
   --hover-color:      white;
   --bkgd-color:       #619B8A;
 }
@@ -127,6 +128,18 @@ a:hover {
 /*single space for the lists*/
 d-article li {
     margin-bottom: 0em;
+}
+
+code {
+    font-size: 87.5%;
+    color: #60AFFF;
+    word-wrap: break-word;
+}
+
+d-article code {
+    font-size: 87.5%;
+    color: #60AFFF;
+    word-wrap: break-word;
 }
 
 /*change buttons on homepage*/

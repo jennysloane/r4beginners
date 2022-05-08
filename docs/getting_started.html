@@ -2111,7 +2111,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
   </style>
-  <style type="text/css">
+  <style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
   /* base variables */
 
   /* Edit the CSS properties in this file to create a custom
@@ -2130,7 +2131,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /*-- Main font sizes --*/
     --title-size:      40px;
     --body-size:       18px;
-    --code-size:       16px;
+    --code-size:       18px;
     --aside-size:      12px;
     --fig-cap-size:    13px;
     /*-- Main font colors --*/
@@ -2140,10 +2141,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --aside-color:     #05204A;
     --fig-cap-color:   #05204A;
     /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    sans-serif;
+    --heading-font:    Itim;
     --mono-font:       monospace;
-    --body-font:       sans-serif;
-    --navbar-font:     sans-serif;  /* websites + blogs only */
+    --body-font:       Nunito;
+    --navbar-font:     Itim;  /* websites + blogs only */
   }
 
   /*-- ARTICLE METADATA --*/
@@ -2172,9 +2173,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /* These properties only apply to Distill sites and blogs  */
 
   .distill-site-header {
-    --title-size:       24px;
+    --title-size:       26px;
     --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        24px;
+    --text-size:        26px;
     --hover-color:      white;
     --bkgd-color:       #619B8A;
   }
@@ -2240,6 +2241,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*single space for the lists*/
   d-article li {
       margin-bottom: 0em;
+  }
+
+  code {
+      font-size: 87.5%;
+      color: #60AFFF;
+      word-wrap: break-word;
+  }
+
+  d-article code {
+      font-size: 87.5%;
+      color: #60AFFF;
+      word-wrap: break-word;
   }
 
   /*change buttons on homepage*/
