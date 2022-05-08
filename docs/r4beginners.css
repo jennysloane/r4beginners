@@ -1,0 +1,164 @@
+
+/* base variables */
+
+/* Edit the CSS properties in this file to create a custom
+   Distill theme. Only edit values in the right column
+   for each row; values shown are the CSS defaults.
+   To return any property to the default,
+   you may set its value to: unset
+   All rows must end with a semi-colon.                      */
+
+/* Optional: embed custom fonts here with `@import`          */
+/* This must remain at the top of this file.                 */
+
+
+
+html {
+  /*-- Main font sizes --*/
+  --title-size:      40px;
+  --body-size:       18px;
+  --code-size:       16px;
+  --aside-size:      12px;
+  --fig-cap-size:    13px;
+  /*-- Main font colors --*/
+  --title-color:     #05204A; /* title of post*/
+  --header-color:    #05204A;
+  --body-color:      #05204A;
+  --aside-color:     #05204A;
+  --fig-cap-color:   #05204A;
+  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --heading-font:    sans-serif;
+  --mono-font:       monospace;
+  --body-font:       sans-serif;
+  --navbar-font:     sans-serif;  /* websites + blogs only */
+}
+
+/*-- ARTICLE METADATA --*/
+d-byline {
+  --heading-size:    0.6rem;
+  --heading-color:   rgba(0, 0, 0, 0.5);
+  --body-size:       0.8rem;
+  --body-color:      rgba(0, 0, 0, 0.8);
+}
+
+/*-- ARTICLE TABLE OF CONTENTS --*/
+.d-contents {
+  --heading-size:    18px;
+  --contents-size:   13px;
+}
+
+/*-- ARTICLE APPENDIX --*/
+d-appendix {
+  --heading-size:    15px;
+  --heading-color:   rgba(0, 0, 0, 0.65);
+  --text-size:       0.8em;
+  --text-color:      rgba(0, 0, 0, 0.5);
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+/* These properties only apply to Distill sites and blogs  */
+
+.distill-site-header {
+  --title-size:       24px;
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        24px;
+  --hover-color:      white;
+  --bkgd-color:       #619B8A;
+}
+
+.distill-site-footer {
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        15px;
+  --hover-color:      white;
+  --bkgd-color:       #0F2E3D;
+}
+
+/*-- Additional custom styles --*/
+/* Add any additional CSS rules below                      */
+
+body {
+  background-color: #fbf7f5;
+  font-size: 18px;
+}
+
+p {
+  color: #01161E;
+}
+
+h1 {
+  color: #619B8A;
+  font-size: 38px;
+}
+
+h2 {
+  color: #619B8A;
+  font-size: 34px;
+}
+
+h3 {
+  color: #619B8A;
+  font-size: 30px;
+}
+
+d-article h1 {
+  color: #619B8A !important;
+  font-size: 38px;
+}
+
+d-article h2 {
+  color: #619B8A !important;
+  font-size: 34px;
+}
+
+d-article h3 {
+  color: #619B8A !important;
+  font-size: 30px;
+}
+
+/*change url color */
+a {
+  color: #DD5E98;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+/*single space for the lists*/
+d-article li {
+    margin-bottom: 0em;
+}
+
+/*change buttons on homepage*/
+.btn-outline-dark {
+    background-color: transparent; 
+    color: #619B8A;
+    border: 1px solid;
+    border-color: #619B8A;
+}
+
+.btn-outline-dark:hover {
+    background-color: #619B8A;
+    border-color: #619B8A;
+    color: white;
+}
+
+/*make logo larger*/
+.rounded {
+  height: 15rem !important; 
+}
+
+/* remove scroll bar on right hand side */
+.d-flex{
+  overflow-y: hidden !important;
+}
+
+/*do not delete - this removes the scroll bar on the right hand side*/
+.vh-100 {
+  height: 90vh!important;
+}
+
+/* pin header */
+.headroom--unpinned {
+    top: 0px;
+}

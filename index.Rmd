@@ -1,0 +1,31 @@
+---
+title: "R for Beginners"
+image: 
+links:
+  # - label: LinkedIn
+  #   url: "https://linkedin.com/"
+  # - label: Twitter
+  #   url: "https://twitter.com/"
+  - label: '<i class="fab fa-github"></i>GitHub'
+    url: "https://github.com/jennysloane/r4beginners"
+  - label: '<i class="fas fa-envelop"></i>Contact Us'
+    url: "mailto:jfsloane92@gmail.com"
+output:
+  postcards::trestles
+site: distill::distill_website
+---
+ 
+# Welcome
+
+Are you interested in learning how to code in R, but have no idea where to start? If this is you... you've come to the right place!
+
+The goal of this website is to make learning R fun and easy! Although many people find the idea of learning how to code to be daunting and overwhelming, it doesn't need to be! With the right resources and tools, coding can be enjoyable and incredibly rewarding. 
+
+On this website, you will find hours of tutorials to help you begin your R coding journey. We will cover everything from introducing you, to RStudio to writing your first R Markdown script, to learning about dataframes and different types of variables. 
+
+- [Getting Started](https://jennysloane.netlify.app/): We highly recommend you start your journey by going through the tutorials in the Getting Started section, especially if you are new to programming.
+- [Workshops](https://jennysloane.netlify.app/): The workshops are designed for beginners and we make sure to cover all of the basics and fundamentals.
+- [Websites](https://jennysloane.netlify.app/): Do you want to apply your new R skills and build your own website? Check out the tutorials to help you build a website using the `distill` or `blogdown` package.
+
+
+
