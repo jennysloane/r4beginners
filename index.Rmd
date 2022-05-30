@@ -33,3 +33,5 @@ $\checkmark$ [Websites](https://jennysloane.netlify.app/): Do you want to apply 
 <div class="license">
 **License and Citation:** You can use, share, modify, and adapt any of the tutorials or lessons, but please include the following attribution: *R4Beginners. (May 30, 2022). Zenodo. [https://doi.org/10.5281/zenodo.6595406](https://doi.org/10.5281/zenodo.6595406)*
 </div>
+
+*Please note - this website is still being developed, so stay tuned for more lessons and tutorials!*

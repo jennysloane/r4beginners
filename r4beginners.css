@@ -168,10 +168,10 @@ d-article code {
   height: 15rem !important; 
 }
 
-/* remove scroll bar on right hand side */
+/* remove scroll bar on right hand side - realized I actually need this. if the window is too small, need to be able to scroll
 .d-flex{
   overflow-y: hidden !important;
-}
+}*/
 
 /*do not delete - this removes the scroll bar on the right hand side*/
 .vh-100 {
