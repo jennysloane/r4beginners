@@ -101,6 +101,13 @@ h3 {
   font-size: 30px;
 }
 
+.license {
+  color: #01161E;
+  font-size: 14px !important;
+  margin-left: 50px;
+  margin-right: 60px;
+}
+
 d-article h1 {
   color: #619B8A !important;
   font-size: 38px;
