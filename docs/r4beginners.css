@@ -182,3 +182,8 @@ d-article code {
 .headroom--unpinned {
     top: 0px;
 }
+
+/*remove search function*/
+.nav-search {
+  display: none !important;
+}
