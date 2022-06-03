@@ -1,0 +1,19 @@
+---
+title: "8. Creating an external blog"
+# description: |
+#   A short description of the post.
+author:
+  - name: Tehilla Ostrovsky
+    url: {}
+date: 2022-05-21
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<iframe width="560" height="400" src="https://www.youtube.com/embed/4S4o7G0OSkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

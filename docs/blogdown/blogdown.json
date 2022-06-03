@@ -117,5 +117,107 @@
     "preview": {},
     "last_modified": "2022-06-03T14:14:53-04:00",
     "input_file": {}
+  },
+  {
+    "path": "blogdown/2022-06-03-blogdown-widgets-nav-links/",
+    "title": "6. Understanding widgets and setting up your navigation links",
+    "description": {},
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-23",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T16:50:51-04:00",
+    "input_file": {}
+  },
+  {
+    "path": "blogdown/2022-06-03-blogdown-edit-experience/",
+    "title": "7. Editing your experience",
+    "description": {},
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-22",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T16:52:02-04:00",
+    "input_file": {}
+  },
+  {
+    "path": "blogdown/2022-06-03-blogdown-external-blog/",
+    "title": "8. Creating an external blog",
+    "description": {},
+    "author": [
+      {
+        "name": "Tehilla Ostrovsky",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-21",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T16:55:42-04:00",
+    "input_file": {}
+  },
+  {
+    "path": "blogdown/2022-06-03-blogdown-internal-blog/",
+    "title": "9. Creating an internal blog",
+    "description": {},
+    "author": [
+      {
+        "name": "Tehilla Ostrovsky",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-20",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T16:56:00-04:00",
+    "input_file": {}
+  },
+  {
+    "path": "blogdown/2022-06-03-blogdown-edit-pubs/",
+    "title": "10. Editing your publications",
+    "description": {},
+    "author": [
+      {
+        "name": "Tehilla Ostrovsky",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-19",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T16:55:14-04:00",
+    "input_file": {}
+  },
+  {
+    "path": "blogdown/2022-06-03-blogdown-wrap-up/",
+    "title": "11. Wrapping Up",
+    "description": {},
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-18",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T16:57:21-04:00",
+    "input_file": {}
   }
 ]
