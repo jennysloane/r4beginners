@@ -1,0 +1,121 @@
+[
+  {
+    "path": "blogdown/2022-06-03-blogdown-getting-started/",
+    "title": "Things to know before you get started",
+    "description": {},
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-30",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T14:09:54-04:00",
+    "input_file": {}
+  },
+  {
+    "path": "blogdown/2022-06-03-blogdown-intro/",
+    "title": "1. Introduction to blogdown",
+    "description": {},
+    "author": [
+      {
+        "name": "Tehilla Ostrovsky",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-29",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T14:10:31-04:00",
+    "input_file": {}
+  },
+  {
+    "path": "blogdown/2022-06-03-blogdown-build-site/",
+    "title": "2. Building your website",
+    "description": {},
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-28",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T14:16:22-04:00",
+    "input_file": {}
+  },
+  {
+    "path": "blogdown/2022-06-03-blogdown-build-site2/",
+    "title": "2.1. Building your website",
+    "description": {},
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-27",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T14:17:15-04:00",
+    "input_file": {}
+  },
+  {
+    "path": "blogdown/2022-06-03-blogdown-basic-config/",
+    "title": "3. Basic configurations",
+    "description": {},
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-26",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T14:15:48-04:00",
+    "input_file": {}
+  },
+  {
+    "path": "blogdown/2022-06-03-blogdown-edit-bio/",
+    "title": "4. Editing your bio",
+    "description": {},
+    "author": [
+      {
+        "name": "Tehilla Ostrovsky",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-25",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T14:15:23-04:00",
+    "input_file": {}
+  },
+  {
+    "path": "blogdown/2022-06-03-blogdown-edit-skills/",
+    "title": "5. Editing your skills",
+    "description": {},
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-05-24",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-06-03T14:14:53-04:00",
+    "input_file": {}
+  }
+]
