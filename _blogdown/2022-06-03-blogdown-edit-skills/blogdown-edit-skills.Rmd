@@ -1,7 +1,7 @@
 ---
-title: "5. Editing your skills"
-# description: |
-#   A short description of the post.
+title: "5. Editing Your Skills"
+description: |
+   In this short tutorial, we'll show you how to modify and add new skills to your website.
 author:
   - name: Jenny Sloane
 date: 2022-05-24

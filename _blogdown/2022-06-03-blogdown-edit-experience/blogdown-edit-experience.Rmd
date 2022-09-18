@@ -1,7 +1,8 @@
 ---
-title: "7. Editing your experience"
-# description: |
-#   A short description of the post.
+title: "7. Editing Your Experience"
+description: |
+   In this tutorial we'll edit the experience section of our website and even show you how to add in logos.
+
 author:
   - name: Jenny Sloane
     url: {}

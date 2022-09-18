@@ -1,8 +1,8 @@
 [
   {
     "path": "blogdown/2022-06-03-blogdown-getting-started/",
-    "title": "Things to know before you get started",
-    "description": {},
+    "title": "Things to Know Before You Get Started",
+    "description": "In this short tutorial we'll go over some general information on blogdown, specifically how themes will update and evolve over time and what that means for you. We also mention which hugo versions and themes we use in our tutorials.",
     "author": [
       {
         "name": "Jenny Sloane",
@@ -13,13 +13,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T14:09:54-04:00",
+    "last_modified": "2022-09-18T13:54:44-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown/2022-06-03-blogdown-intro/",
-    "title": "1. Introduction to blogdown",
-    "description": {},
+    "title": "1. Introduction to Blogdown",
+    "description": "In this first tutorial, we'll introduce the different platforms (i.e. RStudio, HUGO, Github, and Netlify) involved in building our blogdown website and also provide some additional resources.",
     "author": [
       {
         "name": "Tehilla Ostrovsky",
@@ -30,13 +30,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T14:10:31-04:00",
+    "last_modified": "2022-09-18T13:55:21-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown/2022-06-03-blogdown-build-site/",
-    "title": "2. Building your website",
-    "description": {},
+    "title": "2. Building Your Website",
+    "description": "In this tutorial we'll build an academic website from scratch. Please note we use hugo version 0.83.1 and the \"wowchemy/starter-academic\" theme. This theme may be outdated, so if it doesn't work for you please check out our tutorial \"Building your website 2.1\".",
     "author": [
       {
         "name": "Jenny Sloane",
@@ -47,13 +47,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T14:16:22-04:00",
+    "last_modified": "2022-09-18T13:52:00-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown/2022-06-03-blogdown-build-site2/",
-    "title": "2.1. Building your website",
-    "description": {},
+    "title": "2.1. Building Your Website",
+    "description": "In this tutorial we'll build an academic website from scratch. Please note we use hugo version 0.81.0: install_hugo(version = \"0.81.0\", force = TRUE) and this theme: \"tehillamo/academic-theme\"",
     "author": [
       {
         "name": "Jenny Sloane",
@@ -64,13 +64,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T14:17:15-04:00",
+    "last_modified": "2022-09-18T13:52:33-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown/2022-06-03-blogdown-basic-config/",
-    "title": "3. Basic configurations",
-    "description": {},
+    "title": "3. Basic Configurations",
+    "description": "In this tutorial we'll set up some of the basic configurations, including modifying the navigation bar, selecting a color theme, and learning about the different icons on our website.",
     "author": [
       {
         "name": "Jenny Sloane",
@@ -81,13 +81,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T17:00:50-04:00",
+    "last_modified": "2022-09-18T13:51:25-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown/2022-06-03-blogdown-edit-bio/",
-    "title": "4. Editing your bio",
-    "description": {},
+    "title": "4. Editing Your Bio",
+    "description": "In this tutorial we'll edit the bio section of our website. We'll show you how easy it is to edit the content of your biography and we'll go through how to add your own image (aka avatar) and resume.",
     "author": [
       {
         "name": "Tehilla Ostrovsky",
@@ -98,13 +98,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T14:15:23-04:00",
+    "last_modified": "2022-09-18T13:53:03-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown/2022-06-03-blogdown-edit-skills/",
-    "title": "5. Editing your skills",
-    "description": {},
+    "title": "5. Editing Your Skills",
+    "description": "In this short tutorial, we'll show you how to modify and add new skills to your website.",
     "author": [
       {
         "name": "Jenny Sloane",
@@ -115,13 +115,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T14:14:53-04:00",
+    "last_modified": "2022-09-18T13:53:57-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown/2022-06-03-blogdown-widgets-nav-links/",
-    "title": "6. Understanding widgets and setting up your navigation links",
-    "description": {},
+    "title": "6. Understanding Widgets and Setting Up Your Navigation Links",
+    "description": "In this tutorial we'll explain the concept of \"widgets\" and set up the navigation links so that all of the links in the navigation bar work properly.",
     "author": [
       {
         "name": "Jenny Sloane",
@@ -132,13 +132,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T16:50:51-04:00",
+    "last_modified": "2022-09-18T13:55:46-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown/2022-06-03-blogdown-edit-experience/",
-    "title": "7. Editing your experience",
-    "description": {},
+    "title": "7. Editing Your Experience",
+    "description": "In this tutorial we'll edit the experience section of our website and even show you how to add in logos.",
     "author": [
       {
         "name": "Jenny Sloane",
@@ -149,13 +149,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T16:52:02-04:00",
+    "last_modified": "2022-09-18T13:53:29-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown/2022-06-03-blogdown-external-blog/",
-    "title": "8. Creating an external blog",
-    "description": {},
+    "title": "8. Creating an External Blog",
+    "description": "In this tutorial we'll show you how to edit and add external blogs/projects.",
     "author": [
       {
         "name": "Tehilla Ostrovsky",
@@ -166,13 +166,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T16:55:42-04:00",
+    "last_modified": "2022-09-18T13:54:17-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown/2022-06-03-blogdown-internal-blog/",
-    "title": "9. Creating an internal blog",
-    "description": {},
+    "title": "9. Creating an Internal Blog",
+    "description": "In this tutorial we'll show you how to edit and add internal blogs/projects.",
     "author": [
       {
         "name": "Tehilla Ostrovsky",
@@ -183,13 +183,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T16:56:00-04:00",
+    "last_modified": "2022-09-18T13:50:30-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown/2022-06-03-blogdown-edit-pubs/",
-    "title": "10. Editing your publications",
-    "description": {},
+    "title": "10. Editing Your Publications",
+    "description": "In this tutorial we'll show you how to edit your publication. Specifically, we'll show you how to add a journal article, the corresponding citation, and external links and slides.",
     "author": [
       {
         "name": "Tehilla Ostrovsky",
@@ -200,13 +200,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T16:55:14-04:00",
+    "last_modified": "2022-09-18T13:50:11-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown/2022-06-03-blogdown-wrap-up/",
     "title": "11. Wrapping Up",
-    "description": {},
+    "description": "This is our final \"official\" tutorial in our building a website with R blogdown series. This video is only a couple of minutes long where we're just wrapping up!",
     "author": [
       {
         "name": "Jenny Sloane",
@@ -217,7 +217,7 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T16:57:21-04:00",
+    "last_modified": "2022-09-18T13:50:59-05:00",
     "input_file": {}
   }
 ]

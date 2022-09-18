@@ -1,7 +1,7 @@
 ---
-title: "8. Creating an external blog"
-# description: |
-#   A short description of the post.
+title: "8. Creating an External Blog"
+description: |
+   In this tutorial we'll show you how to edit and add external blogs/projects.
 author:
   - name: Tehilla Ostrovsky
     url: {}

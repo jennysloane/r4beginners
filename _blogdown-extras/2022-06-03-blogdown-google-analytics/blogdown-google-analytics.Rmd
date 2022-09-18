@@ -1,7 +1,7 @@
 ---
 title: "Google Analytics"
-# description: |
-#   A short description of the post.
+description: |
+   In this mini series tutorial, we'll walk you through the steps to set up google analytics for your blogdown website. 
 author:
   - name: Jenny Sloane
 date: 2022-05-28

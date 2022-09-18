@@ -1,7 +1,7 @@
 ---
-title: "Things to know before you get started"
-# description: |
-#   A short description of the post.
+title: "Things to Know Before You Get Started"
+description: |
+   In this short tutorial we'll go over some general information on blogdown, specifically how themes will update and evolve over time and what that means for you. We also mention which hugo versions and themes we use in our tutorials.
 author:
   - name: Jenny Sloane
 date: 2022-05-30

@@ -1,7 +1,7 @@
 ---
 title: "Overriding CSS"
-# description: |
-#   A short description of the post.
+description: |
+   In this mini series tutorial we'll explain HTML, CSS, and Markdown and then we'll show you how you can override the default css. We'll go through a few examples of how you can add your own styling to your website. 
 author:
   - name: Tehilla Ostrovsky
 date: 2022-05-29

@@ -1,7 +1,7 @@
 ---
-title: "4. Editing your bio"
-# description: |
-#   A short description of the post.
+title: "4. Editing Your Bio"
+description: |
+   In this tutorial we'll edit the bio section of our website. We'll show you how easy it is to edit the content of your biography and we'll go through how to add your own image (aka avatar) and resume.
 author:
   - name: Tehilla Ostrovsky
 date: 2022-05-25

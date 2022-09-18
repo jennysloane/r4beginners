@@ -1,7 +1,7 @@
 ---
-title: "6. Understanding widgets and setting up your navigation links"
-# description: |
-#   A short description of the post.
+title: "6. Understanding Widgets and Setting Up Your Navigation Links"
+description: |
+   In this tutorial we'll explain the concept of "widgets" and set up the navigation links so that all of the links in the navigation bar work properly.
 author:
   - name: Jenny Sloane
     url: {}

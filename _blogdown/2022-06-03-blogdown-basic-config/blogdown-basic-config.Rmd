@@ -1,7 +1,7 @@
 ---
-title: "3. Basic configurations"
-# description: |
-#   A short description of the post.
+title: "3. Basic Configurations"
+description: |
+   In this tutorial we'll set up some of the basic configurations, including modifying the navigation bar, selecting a color theme, and learning about the different icons on our website.
 author:
   - name: Jenny Sloane
 date: 2022-05-26

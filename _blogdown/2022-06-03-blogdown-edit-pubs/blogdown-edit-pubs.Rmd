@@ -1,7 +1,7 @@
 ---
-title: "10. Editing your publications"
-# description: |
-#   A short description of the post.
+title: "10. Editing Your Publications"
+description: |
+   In this tutorial we'll show you how to edit your publication. Specifically, we'll show you how to add a journal article, the corresponding citation, and external links and slides.
 author:
   - name: Tehilla Ostrovsky
     url: {}

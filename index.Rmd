@@ -1,5 +1,5 @@
 ---
-title: "R for Beginners"
+title: "R 4 Beginners"
 image: 
 links:
   # - label: LinkedIn
@@ -7,7 +7,7 @@ links:
   # - label: Twitter
   #   url: "https://twitter.com/"
   - label: '<i class="fab fa-github"></i>GitHub'
-    url: "https://github.com/jennysloane/r4beginners"
+    url: 'https://github.com/jennysloane/r4beginners target="_blank"'
   - label: '<i class="fas fa-envelop"></i>Contact Us'
     url: "mailto:jfsloane92@gmail.com"
 output:
@@ -21,7 +21,7 @@ site: distill::distill_website
 
 Are you interested in learning how to code in R, but have no idea where to start? If this is you... you've come to the right place!
 
-The goal of this website is to make learning R fun and easy! Although many people find the idea of learning how to code to be daunting and overwhelming, it doesn't need to be. With the right resources and tools, coding can be enjoyable and incredibly rewarding! 
+<!-- The goal of this website is to make learning R fun and easy! Although many people find the idea of learning how to code to be daunting and overwhelming, it doesn't need to be. With the right resources and tools, coding can be enjoyable and incredibly rewarding!  -->
 
 On this website, you will find hours of tutorials to help you begin your R coding journey. We will cover everything from introducing you to RStudio, to writing your first R Markdown script, to learning about dataframes and different types of variables. 
 

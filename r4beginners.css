@@ -125,11 +125,11 @@ d-article h3 {
 
 /*change url color */
 a {
-  color: #DD5E98;
+  color: #007bff ;
 }
 
 a:hover {
-  color: #007bff;
+  color: #DD5E98;
 }
 
 /*single space for the lists*/
@@ -139,13 +139,13 @@ d-article li {
 
 code {
     font-size: 87.5%;
-    color: #60AFFF;
+    color: #DD5E98;
     word-wrap: break-word;
 }
 
 d-article code {
     font-size: 87.5%;
-    color: #60AFFF;
+    color: #DD5E98;
     word-wrap: break-word;
 }
 

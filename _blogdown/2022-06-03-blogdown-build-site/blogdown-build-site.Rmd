@@ -1,7 +1,7 @@
 ---
-title: "2. Building your website"
-# description: |
-#   A short description of the post.
+title: "2. Building Your Website"
+description: |
+   In this tutorial we'll build an academic website from scratch. Please note we use hugo version 0.83.1 and the "wowchemy/starter-academic" theme. This theme may be outdated, so if it doesn't work for you please check out our tutorial "Building your website 2.1".
 author:
   - name: Jenny Sloane
 date: 2022-05-28

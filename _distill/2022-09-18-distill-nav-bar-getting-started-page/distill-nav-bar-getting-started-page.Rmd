@@ -1,0 +1,18 @@
+---
+title: "5. Setting Up Our Navigation Bar and Getting Started Page"
+description: |
+  In this tutorial, we will modify our navigation bar and then build the Getting Started page. I will also show you how to add some customized css styling, create a table of contents, and embed YouTube videos directly into your website.
+author:
+  - name: Jenny Sloane
+date: 2022-06-26
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<iframe width="560" height="400" src="https://www.youtube.com/embed/6QYnzuqvbnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

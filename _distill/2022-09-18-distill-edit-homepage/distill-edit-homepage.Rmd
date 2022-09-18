@@ -1,0 +1,18 @@
+---
+title: "3. Editing your homepage"
+description: |
+  In this tutorial, we will modify the content on our homepage. We will insert a logo, modify the interactive buttons, and update the main text. 
+author:
+  - name: Jenny Sloane
+date: 2022-06-28
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<iframe width="560" height="400" src="https://www.youtube.com/embed/BmCDFD9Cj-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

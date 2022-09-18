@@ -1,8 +1,8 @@
 [
   {
     "path": "blogdown-extras/2022-06-03-blogdown-color-theme-gh-token/",
-    "title": "Custom color theme & GitHub access tokens",
-    "description": {},
+    "title": "Custom Color Theme & GitHub Access Tokens",
+    "description": "In this mini series tutorial we'll show you how to create your own custom color theme for your website. We'll also show you had to use personal access tokens so you can successfully communicate between RStudio and GitHub.",
     "author": [
       {
         "name": "Jenny Sloane",
@@ -13,13 +13,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T17:04:47-04:00",
+    "last_modified": "2022-09-18T13:57:03-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown-extras/2022-06-03-blogdown-override-css/",
     "title": "Overriding CSS",
-    "description": {},
+    "description": "In this mini series tutorial we'll explain HTML, CSS, and Markdown and then we'll show you how you can override the default css. We'll go through a few examples of how you can add your own styling to your website.",
     "author": [
       {
         "name": "Tehilla Ostrovsky",
@@ -30,13 +30,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T17:05:35-04:00",
+    "last_modified": "2022-09-18T13:59:05-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown-extras/2022-06-03-blogdown-google-analytics/",
     "title": "Google Analytics",
-    "description": {},
+    "description": "In this mini series tutorial, we'll walk you through the steps to set up google analytics for your blogdown website.",
     "author": [
       {
         "name": "Jenny Sloane",
@@ -47,13 +47,13 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T17:07:43-04:00",
+    "last_modified": "2022-09-18T13:58:26-05:00",
     "input_file": {}
   },
   {
     "path": "blogdown-extras/2022-06-03-blogdown-contact-form/",
-    "title": "Setting up the contact form with Formspree",
-    "description": {},
+    "title": "Setting Up the Contact Form with Formspree",
+    "description": "In this mini series tutorial, we'll walk you through how to set up the contact form using Formspree so people can contact you directly through your website.",
     "author": [
       {
         "name": "Jenny Sloane",
@@ -64,7 +64,7 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-03T17:08:34-04:00",
+    "last_modified": "2022-09-18T13:57:46-05:00",
     "input_file": {}
   }
 ]

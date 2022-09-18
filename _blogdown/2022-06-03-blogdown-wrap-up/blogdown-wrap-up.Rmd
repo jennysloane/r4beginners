@@ -1,7 +1,7 @@
 ---
 title: "11. Wrapping Up"
-# description: |
-#   A short description of the post.
+description: |
+   This is our final "official" tutorial in our building a website with R blogdown series. This video is only a couple of minutes long where we're just wrapping up!
 author:
   - name: Jenny Sloane
     url: {}

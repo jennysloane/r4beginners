@@ -1,7 +1,7 @@
 ---
-title: "Setting up the contact form with Formspree"
-# description: |
-#   A short description of the post.
+title: "Setting Up the Contact Form with Formspree"
+description: |
+   In this mini series tutorial, we'll walk you through how to set up the contact form using Formspree so people can contact you directly through your website.
 author:
   - name: Jenny Sloane
 date: 2022-05-27

@@ -1,7 +1,7 @@
 ---
-title: "Custom color theme & GitHub access tokens"
-# description: |
-#   A short description of the post.
+title: "Custom Color Theme & GitHub Access Tokens"
+description: |
+   In this mini series tutorial we'll show you how to create your own custom color theme for your website. We'll also show you had to use personal access tokens so you can successfully communicate between RStudio and GitHub. 
 author:
   - name: Jenny Sloane
 date: 2022-05-30

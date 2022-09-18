@@ -1,7 +1,7 @@
 ---
-title: "1. Introduction to blogdown"
-# description: |
-#   A short description of the post.
+title: "1. Introduction to Blogdown"
+description: |
+   In this first tutorial, we'll introduce the different platforms (i.e. RStudio, HUGO, Github, and Netlify) involved in building our blogdown website and also provide some additional resources.
 author:
   - name: Tehilla Ostrovsky
 date: 2022-05-29

@@ -1,0 +1,104 @@
+[
+  {
+    "path": "distill/2022-09-18-distill-getting-started/",
+    "title": "1. Things to Know Before You Get Started",
+    "description": "In this tutorial, we'll go through all of the necessary things I think you should know before building a website in distill. For example, making sure that you have R, RStudio, and Git installed and that you have a GitHub account.",
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-06-30",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-09-18T13:35:07-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "distill/2022-09-18-distill-build-site/",
+    "title": "2. Building Your Website",
+    "description": "In this tutorial, we will build our website in RStudio and get everything set up with GitHub. By the end of this tutorial, you will have a live, working website that will be hosted on GitHub.",
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-06-29",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-09-18T13:34:54-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "distill/2022-09-18-distill-edit-homepage/",
+    "title": "3. Editing your homepage",
+    "description": "In this tutorial, we will modify the content on our homepage. We will insert a logo, modify the interactive buttons, and update the main text.",
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-06-28",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-09-18T13:34:45-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "distill/2022-09-18-distill-color-theme/",
+    "title": "4. Creating a Custom Color Theme",
+    "description": "In this tutorial, we will create a custom color theme for our website. We will update the website's font, color, text size, and even update the color of the interactive buttons on our homepage.",
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-06-27",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-09-18T13:34:29-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "distill/2022-09-18-distill-nav-bar-getting-started-page/",
+    "title": "5. Setting Up Our Navigation Bar and Getting Started Page",
+    "description": "In this tutorial, we will modify our navigation bar and then build the Getting Started page. I will also show you how to add some customized css styling, create a table of contents, and embed YouTube videos directly into your website.",
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-06-26",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-09-18T13:33:55-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "distill/2022-09-18-distill-creating-posts/",
+    "title": "6. Creating Lessons/Posts",
+    "description": "In this tutorial, we will create a few of the lesson plans from the R-Girls website. Specifically, we will create the \"My 1st R Markdown Lesson\" and two of the Math lessons.",
+    "author": [
+      {
+        "name": "Jenny Sloane",
+        "url": {}
+      }
+    ],
+    "date": "2022-06-25",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-09-18T13:34:08-05:00",
+    "input_file": {}
+  }
+]

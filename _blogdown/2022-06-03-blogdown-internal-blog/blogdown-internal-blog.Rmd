@@ -1,7 +1,8 @@
 ---
-title: "9. Creating an internal blog"
-# description: |
-#   A short description of the post.
+title: "9. Creating an Internal Blog"
+description: |
+   In this tutorial we'll show you how to edit and add internal blogs/projects.
+
 author:
   - name: Tehilla Ostrovsky
     url: {}
