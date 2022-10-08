@@ -1,6 +1,6 @@
 ---
-title: "R 4 Beginners"
-image: 
+title: 
+image: "images/logo.png"
 links:
   # - label: LinkedIn
   #   url: "https://linkedin.com/"
