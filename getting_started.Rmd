@@ -2,7 +2,12 @@
 title: "Getting Started"
 # description: |
 #   A new article created using the Distill format.
-output: distill::distill_article
+#output: distill::distill_article
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
@@ -18,14 +23,14 @@ To begin your coding journey, I recommend watching and following along with the 
 - Get a brief introduction to the world of `tidyverse`
 - Learn about my typical workflow in R, where I also mention a few tips and tricks along the way
 
-# Introduction to R 
+## Introduction to R 
 
 <iframe width="560" height="400" src="https://www.youtube.com/embed/ozgTOQ4bOoI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-# Introduction to Tidyverse 
+## Introduction to Tidyverse 
 
 <iframe width="560" height="400" src="https://www.youtube.com/embed/CevBDdAgXIc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-# My Workflow
+## My Workflow
 
 <iframe width="560" height="400" src="https://www.youtube.com/embed/TDwJ0Epzq5M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

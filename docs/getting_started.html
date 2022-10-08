@@ -107,7 +107,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Getting Started"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Getting Started"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2165,8 +2165,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --aside-size:      12px;
     --fig-cap-size:    13px;
     /*-- Main font colors --*/
-    --title-color:     #05204A; /* title of post*/
-    --header-color:    #05204A;
+    --title-color:     #619B8A; /* title of post*/
+    --header-color:    #619B8A;
     --body-color:      #05204A;
     --aside-color:     #05204A;
     --fig-cap-color:   #05204A;
@@ -2235,12 +2235,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
   h2 {
-    color: #619B8A;
+    color: #173B73;
     font-size: 34px;
   }
 
   h3 {
-    color: #619B8A;
+    color: #173B73;
     font-size: 30px;
   }
 
@@ -2257,12 +2257,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
   d-article h2 {
-    color: #619B8A !important;
+    color: #173B73 !important;
     font-size: 34px;
   }
 
   d-article h3 {
-    color: #619B8A !important;
+    color: #173B73 !important;
     font-size: 30px;
   }
 
@@ -2329,6 +2329,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*remove search function*/
   .nav-search {
     display: none !important;
+  }
+
+  .algolia-autocomplete {
+      display: none;
   }</style>
   <style type="text/css">
   /* base style */
@@ -2547,6 +2551,17 @@ Building Websites
 
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#introduction-to-r">Introduction to R</a></li>
+<li><a href="#introduction-to-tidyverse">Introduction to
+Tidyverse</a></li>
+<li><a href="#my-workflow">My Workflow</a></li>
+</ul>
+</nav>
+</div>
 <p>To begin your coding journey, I recommend watching and following
 along with the below tutorials. In these tutorials you will:</p>
 <ul>
@@ -2562,13 +2577,13 @@ files, but I think it’s important to learn about both</li>
 <li>Learn about my typical workflow in R, where I also mention a few
 tips and tricks along the way</li>
 </ul>
-<h1 id="introduction-to-r">Introduction to R</h1>
+<h2 id="introduction-to-r">Introduction to R</h2>
 <iframe width="560" height="400" src="https://www.youtube.com/embed/ozgTOQ4bOoI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-<h1 id="introduction-to-tidyverse">Introduction to Tidyverse</h1>
+<h2 id="introduction-to-tidyverse">Introduction to Tidyverse</h2>
 <iframe width="560" height="400" src="https://www.youtube.com/embed/CevBDdAgXIc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-<h1 id="my-workflow">My Workflow</h1>
+<h2 id="my-workflow">My Workflow</h2>
 <iframe width="560" height="400" src="https://www.youtube.com/embed/TDwJ0Epzq5M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 <div class="sourceCode" id="cb1"><pre
