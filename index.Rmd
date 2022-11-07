@@ -23,7 +23,7 @@ Are you interested in learning how to code in R, but have no idea where to start
 
 <!-- The goal of this website is to make learning R fun and easy! Although many people find the idea of learning how to code to be daunting and overwhelming, it doesn't need to be. With the right resources and tools, coding can be enjoyable and incredibly rewarding!  -->
 
-On this website, you will find hours of tutorials to help you begin your R coding journey. We will cover everything from introducing you to RStudio, to writing your first R Markdown script, to learning about dataframes and different types of variables. 
+On this website, you will find hours of tutorials to help you begin your R coding journey. We will cover everything from introducing you to RStudio, to writing your first R Markdown script, to learning about data frames and different types of variables. 
 
 $\checkmark$ [Getting Started](https://r4beginners.com/getting_started.html): We highly recommend you start your journey by going through the tutorials in the Getting Started section, especially if you are new to programming. <br>
 $\checkmark$ [Lessons](https://r4beginners.com/lessons.html): The lessons are designed for beginners and we make sure to cover all of the basics and fundamentals. <br>
