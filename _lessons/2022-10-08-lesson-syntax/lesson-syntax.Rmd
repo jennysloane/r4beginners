@@ -12,6 +12,7 @@ output:
 
 
 In this lesson we will review some of the basic syntax of R, including several common operators, including the following:
+
 - assignment operator (<-)
 - greater than operator (>)
 - less than operator (<)
