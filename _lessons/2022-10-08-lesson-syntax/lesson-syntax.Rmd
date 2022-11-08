@@ -10,21 +10,19 @@ output:
     self_contained: false
 ---
 
-
-In this lesson we will review some of the basic syntax of R, including several common operators, including the following:
-
-- assignment operator (<-)
-- greater than operator (>)
-- less than operator (<)
-- equality operator (==) 
-- inequality operator (!=)
-- and operator (&)
-- or operator (|)
-
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 ```
+
+In this lesson we will review some of the basic syntax of R, including the following common operators:
+
+- assignment operator `<-`
+- greater than operator `>`
+- less than operator `<`
+- equality operator `==` 
+- inequality operator `!=`
+- and operator `&`
+- or operator `|`
 
 ## Syntax 
 
@@ -32,9 +30,9 @@ Syntax in computer programming is a set of rules that defines the structure of a
 
 ### Example
 
-In this example, we are trying to print the following famous coding statement: "hello world". 
+- In this example, we are trying to print the following famous coding statement: "hello world"
 
-- In this first R chunk, we can see how to successfully print "hello world".
+- In this first R chunk, we can see how to successfully print "hello world"
 
 **To run the line of code below (aka R chunk) you can either push the green arrow pointing to the right or click on the line of code and push ctrl+enter (windows) or cmd+enter (mac)**
 
@@ -52,12 +50,13 @@ Print("hello world")
 
 ### Assignment Operator
 
-- In R, one of the most common operators is the "assignment operator" which looks like this arrow <-
+- In R, one of the most common operators is the "assignment operator" which looks like this arrow `<-`
 - In most situations, it would also be acceptable to use the = sign, but in R, the arrow is the typical notation
 - In this next example, we are assigning x to be 10, y to be 25, and z to be 100
 - x, y, and z are stored as values (or variables) in our Environment
 
 **Before you run the R chunk below, click on the Environment pane (usually located in the top right corner of RStudio). Watch what happens when you run the code below**
+
 ```{r}
 x <- 10
 x
@@ -74,14 +73,17 @@ z
 
 ### Greater or Less than Operators
 
-- > greater than operator
-- < less than operator
-- Is x greater than y? Remember, we have x assigned to 10 and y assigned to 25. So is 10 greater than 25? True or False? 
+- `>` greater than operator
+- `<` less than operator
+- In this example, we will ask if x is greater than y? 
+- Remember, we have x assigned to 10 and y assigned to 25. So, is 10 greater than 25? True or False? 
+
 ```{r}
 x > y
 ```
 
 - Is x less than y? 
+
 ```{r}
 x < y 
 ```
@@ -89,73 +91,63 @@ x < y
 
 ### Equality Operators
 
-- == is the equal-to operator
+- `==` is the equal-to operator
 - We can think of the example below as "is x equal to y?" 
 - Notice, in this scenario R will return TRUE or FALSE and the values of x and y do not change
 
 **Be careful not to confuse == and =** 
+
 ```{r}
 x == y 
 x # x is still 10
 ```
 
 - If we instead had x = y, R doesn't return anything, but the value of x has updated in the environment 
+
 ```{r}
 x = y
 x # x is now 25
 ```
 
 - Here, we'll just re-assign x to 10
+
 ```{r}
 x <- 10
 ```
 
-- != is the not-equal-to operator (opposite of ==)
+- `!=` is the not-equal-to operator (opposite of ==)
 - We can think of the example below as: "Is x *not equal* to y, True or False?"
+
 ```{r}
 x != y 
 ```
 
 ### The And Operator
 
-- & is the "and" operator
+- `&` is the "and" operator
 - We can think of this example in two parts: Is z greater than 50 AND is z less than 200? 
 - Remember, z is 100. So, is it true that 100 > 50 AND 100 < 200? 
 - In order for this statement to be true, both pieces must be true
+
 ```{r}
 z > 50 & z < 200 
 ```
 
 - What about if we asked the following: is z > 50 AND is z > 200? 
+
 ```{r}
 z > 50 & z > 200
 ```
 
 ### The Or Operator
-- | is the "or" operator
+
+- `|` is the "or" operator
 - We can again think of this example in two parts: is z greater than 50 OR is z greater than 200?
 - However, this time, in order for the statement (aka expression) to be true, only one of the parts needs to be true
-- So, let's test the same line of code we had in the last example but with an | operator instead of an & operator and see what gets returned
+- So, let's test the same line of code we had in the last example but with an | operator instead of an & operator 
+
 ```{r}
 z > 50 | z > 200
 ```
 
-
-## Vectors
-
-- In R, a vector is the simplest type of data structure. It is "a single entity consisting of a collection of things"
-
-```{r}
-names <- c("Kevin", "Jenny", "Millie")
-
-age <- c(20, 18, 33)
-
-blue_eyes <- c(TRUE, FALSE, FALSE)
-```
-
-## Types of Variables
-
-
-
-
-![](images/data_types.png)
+## THE END 

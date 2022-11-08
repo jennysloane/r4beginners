@@ -1,0 +1,35 @@
+---
+title: "packages"
+description: |
+  A short description of the post.
+author:
+  - name: Jenny Sloane
+    url: {}
+date: 2022-11-07
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Vectors
+
+In R, a vector is the simplest type of data structure. It is a sequence of data elements of the same basic type
+
+```{r}
+names <- c("Kevin", "Jenny", "Millie")
+
+age <- c(20, 18, 33)
+
+blue_eyes <- c(TRUE, FALSE, FALSE)
+```
+
+
+
+
+We will also discuss packages and how to install and load (or call) in the libraries for the packages you want to use.
