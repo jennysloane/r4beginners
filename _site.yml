@@ -9,6 +9,8 @@ navbar:
     # - text: "Home"
     #   href: index.html
   right:
+    - text: "About Me"
+      href: about.html
     - text: "Getting Started"
       href: getting_started.html
     - text: "Lessons"
