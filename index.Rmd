@@ -27,7 +27,7 @@ On this website, you'll find hours of tutorials to help you begin your R coding 
 
 $\checkmark$ [Getting Started](https://r4beginners.com/getting_started.html): I highly recommend you start your journey by going through the tutorials in the Getting Started section, especially if you are new to programming. <br>
 $\checkmark$ [Lessons](https://r4beginners.com/lessons.html): The lessons are designed for beginners and we make sure to cover all of the basics and fundamentals. <br>
-$\checkmark$ [Websites](https://r4beginners.com/distill.html): Do you want to apply your new R skills and build your own website? Check out the tutorials to help you build a website using the `distill` or `blogdown` package.
+$\checkmark$ [Building Websites](https://r4beginners.com/distill.html): Do you want to apply your new R skills and build your own website? Check out the tutorials to help you build a website using the `distill` or `blogdown` package.
 
 
 <div class="license">
