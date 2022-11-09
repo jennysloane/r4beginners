@@ -16,13 +16,13 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 
 In this lesson we will review some of the basic syntax of R, including the following common operators:
 
-- assignment operator `<-`
-- greater than operator `>`
-- less than operator `<`
-- equality operator `==` 
-- inequality operator `!=`
-- and operator `&`
-- or operator `|`
+- `<-` assignment operator 
+- `>` greater than operator 
+- `<` less than operator 
+- `==` equality operator  
+- `!=` inequality operator 
+- `&` and operator 
+- `|` or operator 
 
 ## Syntax 
 

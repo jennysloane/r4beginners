@@ -19,7 +19,7 @@ knitr::include_graphics("images/Jenny_prof_pic.png")
 
 My name is Jenny Sloane and I'm currently a postdoc fellow in Health Services Research and Development at the Center for Innovations in Quality, Effectiveness and Safety, which is associated with the Houston VA and Baylor College of Medicine. </p>
 
-Here's a little bit about me, but for more details, please visit my [personal website](https://jennysloane.netlify.app/){target="_blank"}
+Here's a little bit about me, but for more details, you can check out my website [here](https://jennysloane.netlify.app/){target="_blank"}
 
 :::
 
