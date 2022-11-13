@@ -3,6 +3,7 @@ title: "Home"
 # description: |
 #   r4beginners
 output_dir: "docs"
+google_analytics: "G-6YZVQBJ008"
 theme: r4beginners.css
 navbar:
   left:
