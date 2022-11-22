@@ -14,7 +14,9 @@ navbar:
       href: about.html
     - text: "Getting Started"
       href: getting_started.html
-    - text: "Lessons"
+    - text: "Interactive Lesson"
+      href: 'https://jsloane.shinyapps.io/learnr/'
+    - text: "Lessons" 
       href: lessons.html
     - text: "Building Websites"
       menu:

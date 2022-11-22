@@ -152,6 +152,11 @@ code {
     word-wrap: break-word;
 }
 
+p code:not(.sourceCode), li code:not(.sourceCode) {
+    background-color: #ffe9ec;
+    padding: 0.2em;
+}
+
 d-article code {
     font-size: 87.5%;
     color: #DD5E98;
