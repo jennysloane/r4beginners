@@ -8,7 +8,7 @@ theme: r4beginners.css
 navbar:
   left:
     # - text: "Home"
-    #   href: index.html
+    #   href: index.html 
   right:
     - text: "About Me"
       href: about.html
