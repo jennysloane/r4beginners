@@ -15,61 +15,156 @@ output:
 knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 ```
 
-A data structure is a unique way of organizing data so that it can be stored, processed, and retrieved effectively. In the previous Data Structure lesson we reviewed vectors, matrices, and arrays. And now in this lesson we will review:
+In the previous Data Structure lesson we reviewed vectors, matrices, and arrays. And now in this lesson we will review:
 
 - Data frames
 - Tibbles
 
 ## Data frames
 
-What is a data frame?
-  - A data frame is a common way of storing data in R. Data frames can have variables are different types (e.g. one variable may be a character and one may be numeric).
-  
-I find the best way to understand a new concept (especially with coding) is to work through a concrete example. So here, we will explore the penguins dataset that is included in the palmerpenguins package, so once you load the library you can take a look at `penguins`
-- how can we interpret this data?
-  - each row is a unique penguin
-  - each column is a variable that provides information about the penguin 
-- we can see this is a data frame and it actually tells us penguins is specifically a "tibble"
-- tibbles are simple data frames with some features that make working with the data really nice
-  - shows us exactly how big our dataset is (344 rows and 8 columns)
-  - automatically only prints out the first 10 rows, so we can always see the variable names at the top
-  - under each variable name, we see what type of variable it is (i.e. fct, dbl, int)
+**data frame == data set??**
+
+- A data frame is a common way of storing data in R. 
+- In data frames, the columns are the different variables of the data set and the rows are unique observations.
+- This may sound similar to matrices, but matrices can only have one type of data. 
+- Data frames can have variables of different types. For example, one variable may be a character and one may be numeric. 
+- R has several built in data frames (e.g., `mtcars`, `iris`, `toothgrowth`, and more). 
+
+### `mtcars` example
+
+Let's take a look at `mtcars`:
+
+```{r}
+mtcars
+```
+
+- R returns the entire dataframe, so if you're like me and like to view your output in the console of RStudio, you'll probably need to scroll up in order to see first row along with the variables.
+- We can see there are 11 variables, but it's hard to know exactly how many rows (or observations) there are.
+- We can type `?mtcars` into the console to get more information. 
+<!-- Similar to how we can use the ? to look up functions, we can also use the ? to look up built-in R datasets like mtcars.   -->
+- Here, we can see there are 32 observations and we can see what each variable is.
+
+### Helpful functions to explore dataframe
+
+We can also use existing functions to help us understand our data better:
+
+- `head()` returns the top 6 rows. This doesn't actually give us any new information about our dataset, but it's a really useful function to know about because it's helpful to be able to get a view of the first several rows along with the variable names. 
+
+```{r}
+head(mtcars)
+```
+
+- `View()` = allows you to view the dataframe in a new window, making it easier to explore the full dataset.
 
 ```{r eval=FALSE}
-penguins
+View(mtcars)
+```
 
-is.data.frame(penguins)
-is_tibble(penguins)
+- `nrow()` = number of rows
 
-is.data.frame(names)
+```{r}
+nrow(mtcars)
+```
+
+- `ncol()` = number of columns
+
+```{r}
+ncol(mtcars)
+```
+
+- `str()` = shows the structure of our data frame in a compact way. We can see the number of observations and number of variables. We can also see a bit more information about each variable. For example, we can see that all of the variables in `mtcars` are numeric. It even lists the first several observations for each variable. 
+  - `glimpse()` is a similar function. I encourage you to try it out!
+
+```{r}
+str(mtcars)
+```
+
+- `summary()` = provides a summary of the different variables. Because all the variables are numeric, we can see the summary function returns the following information: minimum value, 1st quartile (25th percentile), median, mean, 3rd quartile (75th percentile), and maximum value.  
+
+```{r}
+summary(mtcars)
+```
+
+- What if we only wanted to get a summary of the first variable, mpg? No problem, we can modify the code like this:
+
+```{r}
+summary(mtcars$mpg)
 ```
 
 ## Tibbles
 
+A tibble is a type of data frame with some special features that we will explore. If you use `tidyverse`, chances our you'll see a lot of tibbles! 
+
+There are some differences between tibbles and data frames, but those are not important when learning the basics. We'll go through the basic differences, but here's a useful link if you're interested in learning more about tibbles: [tibble.tidyverse.org](https://tibble.tidyverse.org/).
+
+### `Penguins` example
+
+To understand the unique features of a tibble, we'll explore the `penguins` dataset that is included in the `palmerpenguins` package.
+
+In the last lesson, we learned about packages. We know the first things we need to do is load the package and then we will have access to the penguins dataset.
+
+```{r}
+library(palmerpenguins)
+penguins
+```
+
+- The first line of output says: "A tibble: 344 x 8". Straight away, we get confirmation that this data frame is a tibble. And there are 344 rows and 8 columns. 
+- Because tibbles are a type of data frame, similar to what we saw with the `mtcars` data frame, each column is a variable and each row is a unique observation. 
+- Just to confirm, we can run the following 2 lines of code to see that penguins is both a data frame and a tibble:
+
+```{r eval=FALSE}
+is.data.frame(penguins)
+is_tibble(penguins)
+```
+
+### So what is special about tibbles?
+
+  - Tibbles are simple data frames with some features that make working with the data really nice.
+  - As already pointed out, the tibble shows us exactly how big our dataset is (344 rows and 8 columns).
+  - It automatically only prints out the first 10 rows, so it's much easier to see the variables in our dataset. 
+  - Under each variable name, we see what type of variable it is (e.g., fct, dbl, int, etc.)
+  - R only returns the number of columns that fit on your screen. For example, if you view your output in the console, it's likely that not all of the variables will neatly fit on your screen. Under the 10 rows of data, you may see something like: "and 1 more variable: year <int>". This is great because you get important information on all of the variables even if there are too many to fit on your screen. 
+
+### Converting a data frame to a tibble
+
+- Recall, that by default mtcars is a data frame and not a tibble, 
+
+```{r}
+mtcars
+```
+
+- However, we can easily use the `as_tibble()` function to convert it to a tibble. 
+**part of tidyverse....**
+```{r}
+library(tidyverse)
+as_tibble(mtcars)
+```
+
+- This example should highlight the advantages of working with tibbles.
+- Personally, I try to work exclusively with tibbles because I find it so much easier and cleaner. 
 
 ### Create our own tibble
 
-- let's combine the vectors we created in the previous workshop into a tibble using `tibble()`
+In the Data Structure: Part 1 lesson, we created three vectors: `names`, `age`, and `blue_eyes`. Now, let's create a tibble consisting of these three vectors. 
 
-```{r eval=FALSE}
-names <- c("xxx", "yyy", "zzz")
-age <- c(20, 18, 33)
+- We will use the `tibble()` function.
+- Each line of our tibble represents a unique variable (or column). The text to the left of the equals sign is the variable name and the text to right is the data we want to be stored in our tibble. For example, `Name` is variable name for the first column and the data is our `names` vector (Josh, Jenny, Brandon).
+- We will save our tibble as `my_tibble()`.
+
+```{r}
+names <- c("Josh", "Jenny", "Brandon")
+ages <- c(31, 30, 27)
 blue_eyes <- c(TRUE, FALSE, FALSE)
 
 my_tibble <- tibble(
   Name = names,
-  Age = age,
+  Age = ages,
   Blue_eye = blue_eyes
 )
 
-is.data.frame(my_tibble)
-is_tibble(my_tibble)
-
-my_tibble$Name[1]
-
-my_tibble[1,3]
-
-
+my_tibble
 ```
 
+- And just like that, we created our very own 3x3 tibble! 
 
+## THE END
