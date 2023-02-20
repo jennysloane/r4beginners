@@ -88,635 +88,38 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Home: Lessons</title>
+  <title>4. Packages and Functions</title>
+
+  <meta property="description" itemprop="description" content="In this lesson we will review the basics of packages (including Tidyverse) and functions."/>
 
 
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2023-02-17"/>
+  <meta property="article:created" itemprop="dateCreated" content="2023-02-17"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Home: Lessons"/>
+  <meta property="og:title" content="4. Packages and Functions"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="In this lesson we will review the basics of packages (including Tidyverse) and functions."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Home"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Home: Lessons"/>
+  <meta property="twitter:title" content="4. Packages and Functions"/>
+  <meta property="twitter:description" content="In this lesson we will review the basics of packages (including Tidyverse) and functions."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","listing"]}},"value":[{"type":"character","attributes":{},"value":["Lessons"]},{"type":"character","attributes":{},"value":["lessons"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["4. Packages and Functions"]},{"type":"character","attributes":{},"value":["In this lesson we will review the basics of packages (including Tidyverse) and functions.\n"]},{"type":"character","attributes":{},"value":["2023-02-17"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["images/packages-tree-diagram.png","lesson4-packages-functions_files/anchor-4.2.2/anchor.min.js","lesson4-packages-functions_files/bowser-1.9.3/bowser.min.js","lesson4-packages-functions_files/distill-2.2.21/template.v2.js","lesson4-packages-functions_files/header-attrs-2.14/header-attrs.js","lesson4-packages-functions_files/jquery-3.6.0/jquery-3.6.0.js","lesson4-packages-functions_files/jquery-3.6.0/jquery-3.6.0.min.js","lesson4-packages-functions_files/jquery-3.6.0/jquery-3.6.0.min.map","lesson4-packages-functions_files/popper-2.6.0/popper.min.js","lesson4-packages-functions_files/tippy-6.2.7/tippy-bundle.umd.min.js","lesson4-packages-functions_files/tippy-6.2.7/tippy-light-border.css","lesson4-packages-functions_files/tippy-6.2.7/tippy.css","lesson4-packages-functions_files/tippy-6.2.7/tippy.umd.min.js","lesson4-packages-functions_files/webcomponents-2.0.0/webcomponents.js","packages-tree-diagram.png"]}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2063,736 +1466,348 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </script>
 
-  <style type="text/css">
-  /* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-
-
-
-  html {
-    /*-- Main font sizes --*/
-    --title-size:      50px;
-    --body-size:       1.06rem;
-    --code-size:       14px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #000000;
-    --header-color:    rgba(0, 0, 0, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    sans-serif;
-    --mono-font:       monospace;
-    --body-font:       sans-serif;
-    --navbar-font:     sans-serif;  /* websites + blogs only */
-  }
-
-  /*-- ARTICLE METADATA --*/
-  d-byline {
-    --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
-    --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
-  }
-
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);
-    --text-size:       0.8em;
-    --text-color:      rgba(0, 0, 0, 0.5);
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
-  .distill-site-header {
-    --title-size:       18px;
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  .distill-site-footer {
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  /*-- Additional custom styles --*/
-  /* Add any additional CSS rules below                      */
-  </style>
-  <style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-  /* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-
-
-
-  html {
-    /*-- Main font sizes --*/
-    --title-size:      40px;
-    --body-size:       18px;
-    --code-size:       18px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #619B8A; /* title of post*/
-    --header-color:    #619B8A;
-    --body-color:      #05204A;
-    --aside-color:     #05204A;
-    --fig-cap-color:   #05204A;
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    Itim;
-    --mono-font:       monospace;
-    --body-font:       Nunito;
-    --navbar-font:     Itim;  /* websites + blogs only */
-  }
-
-  /*-- ARTICLE METADATA --*/
-  d-byline {
-    --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
-    --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
-  }
-
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);
-    --text-size:       0.8em;
-    --text-color:      rgba(0, 0, 0, 0.5);
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
-  .distill-site-header {
-    --title-size:       26px;
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        26px;
-    --hover-color:      white;
-    --bkgd-color:       #619B8A;
-  }
-
-  .distill-site-footer {
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  /*-- Additional custom styles --*/
-  /* Add any additional CSS rules below                      */
-
-  body {
-    background-color: #fbf7f5;
-    font-size: 18px;
-  }
-
-  p {
-    color: #01161E;
-  }
-
-  h1 {
-    color: #619B8A;
-    font-size: 38px;
-  }
-
-  h2 {
-    color: #173B73;
-    font-size: 34px;
-  }
-
-  h3 {
-    color: #173B73;
-    font-size: 30px;
-  }
-
-  .license {
-    color: #01161E;
-    font-size: 14px !important;
-    margin-left: 50px;
-    margin-right: 60px;
-  }
-
-  d-article h1 {
-    color: #619B8A !important;
-    font-size: 38px;
-  }
-
-  d-article h2 {
-    color: #173B73 !important;
-    font-size: 34px;
-  }
-
-  d-article h3 {
-    color: #173B73 !important;
-    font-size: 30px;
-  }
-
-  /*change url color */
-  a {
-    color: #007bff ;
-  }
-
-  d-article a {
-    color: #007bff ;
-    border-bottom: none;
-  }
-
-  a:hover {
-    color: #DD5E98;
-  }
-
-  d-article a:hover {
-    color: #DD5E98;
-  }
-
-  /*single space for the lists*/
-  d-article li {
-      margin-bottom: 0em;
-  }
-
-  code {
-      font-size: 87.5%;
-      color: #DD5E98;
-      word-wrap: break-word;
-  }
-
-  p code:not(.sourceCode), li code:not(.sourceCode) {
-      background-color: #ffe9ec;
-      padding: 0.2em;
-  }
-
-  d-article code {
-      font-size: 87.5%;
-      color: #DD5E98;
-      word-wrap: break-word;
-  }
-
-  /*change buttons on homepage*/
-  .btn-outline-dark {
-      background-color: transparent; 
-      color: #619B8A;
-      border: 1px solid;
-      border-color: #619B8A;
-  }
-
-  .btn-outline-dark:hover {
-      background-color: #619B8A;
-      border-color: #619B8A;
-      color: white;
-  }
-
-  /*make logo larger*/
-  .rounded {
-    height: 15rem !important; 
-  }
-
-  /* remove scroll bar on right hand side - realized I actually need this. if the window is too small, need to be able to scroll
-  .d-flex{
-    overflow-y: hidden !important;
-  }*/
-
-  /*do not delete - this removes the scroll bar on the right hand side*/
-  .vh-100 {
-    height: 90vh!important;
-  }
-
-  /* pin header */
-  .headroom--unpinned {
-      top: 0px;
-  }
-
-  /*remove search function*/
-  .nav-search {
-    display: none !important;
-  }
-
-  .algolia-autocomplete {
-      display: none;
-  }</style>
-  <style type="text/css">
-  /* base style */
-
-  /* FONT FAMILIES */
-
-  :root {
-    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-  }
-
-  body,
-  .posts-list .post-preview p,
-  .posts-list .description p {
-    font-family: var(--body-font), var(--body-default);
-  }
-
-  h1, h2, h3, h4, h5, h6,
-  .posts-list .post-preview h2,
-  .posts-list .description h2 {
-    font-family: var(--heading-font), var(--heading-default);
-  }
-
-  d-article div.sourceCode code,
-  d-article pre code {
-    font-family: var(--mono-font), var(--mono-default);
-  }
-
-
-  /*-- TITLE --*/
-  d-title h1,
-  .posts-list > h1 {
-    color: var(--title-color, black);
-  }
-
-  d-title h1 {
-    font-size: var(--title-size, 50px);
-  }
-
-  /*-- HEADERS --*/
-  d-article h1,
-  d-article h2,
-  d-article h3,
-  d-article h4,
-  d-article h5,
-  d-article h6 {
-    color: var(--header-color, rgba(0, 0, 0, 0.8));
-  }
-
-  /*-- BODY --*/
-  d-article > p,  /* only text inside of <p> tags */
-  d-article > ul, /* lists */
-  d-article > ol {
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-    font-size: var(--body-size, 1.06rem);
-  }
-
-
-  /*-- CODE --*/
-  d-article div.sourceCode code,
-  d-article pre code {
-    font-size: var(--code-size, 14px);
-  }
-
-  /*-- ASIDE --*/
-  d-article aside {
-    font-size: var(--aside-size, 12px);
-    color: var(--aside-color, rgba(0, 0, 0, 0.6));
-  }
-
-  /*-- FIGURE CAPTIONS --*/
-  figure .caption,
-  figure figcaption,
-  .figure .caption {
-    font-size: var(--fig-cap-size, 13px);
-    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
-  }
-
-  /*-- METADATA --*/
-  d-byline h3 {
-    font-size: var(--heading-size, 0.6rem);
-    color: var(--heading-color, rgba(0, 0, 0, 0.5));
-  }
-
-  d-byline {
-    font-size: var(--body-size, 0.8rem);
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-  }
-
-  d-byline a,
-  d-article d-byline a {
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-  }
-
-  /*-- TABLE OF CONTENTS --*/
-  .d-contents nav h3 {
-    font-size: var(--heading-size, 18px);
-  }
-
-  .d-contents nav a {
-    font-size: var(--contents-size, 13px);
-  }
-
-  /*-- APPENDIX --*/
-  d-appendix h3 {
-    font-size: var(--heading-size, 15px);
-    color: var(--heading-color, rgba(0, 0, 0, 0.65));
-  }
-
-  d-appendix {
-    font-size: var(--text-size, 0.8em);
-    color: var(--text-color, rgba(0, 0, 0, 0.5));
-  }
-
-  d-appendix d-footnote-list a.footnote-backlink {
-    color: var(--text-color, rgba(0, 0, 0, 0.5));
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  .distill-site-header .title {
-    font-size: var(--title-size, 18px);
-    font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .distill-site-header a,
-  .nav-dropdown .nav-dropbtn {
-    font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    font-size: var(--text-size, 15px);
-  }
-
-  .distill-site-header a:hover,
-  .nav-dropdown:hover .nav-dropbtn {
-    color: var(--hover-color, white);
-  }
-
-  .distill-site-header {
-    font-size: var(--text-size, 15px);
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    background-color: var(--bkgd-color, #0F2E3D);
-  }
-
-  .distill-site-footer {
-    font-size: var(--text-size, 15px);
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    background-color: var(--bkgd-color, #0F2E3D);
-  }
-
-  .distill-site-footer a:hover {
-    color: var(--hover-color, white);
-  }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="lesson4-packages-functions_files/header-attrs-2.14/header-attrs.js"></script>
+  <script src="lesson4-packages-functions_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="lesson4-packages-functions_files/popper-2.6.0/popper.min.js"></script>
+  <link href="lesson4-packages-functions_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="lesson4-packages-functions_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="lesson4-packages-functions_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="lesson4-packages-functions_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="lesson4-packages-functions_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="lesson4-packages-functions_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="lesson4-packages-functions_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <script type="text/javascript" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-6YZVQBJ008"></script>
-  <script type="text/javascript" cookie-consent="tracking">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6YZVQBJ008');
-  </script>
   <!--/radix_placeholder_site_in_header-->
 
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Lessons","authors":[]}
+{"title":"4. Packages and Functions","description":"In this lesson we will review the basics of packages (including Tidyverse) and functions.","authors":[],"publishedDate":"2023-02-17T00:00:00.000-06:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">Home</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-</div>
-<div class="nav-right">
-<a href="about.html">About Me</a>
-<a href="getting_started.html">Getting Started</a>
-<a href="https://jsloane.shinyapps.io/Basic-Syntax/">Interactive Lesson</a>
-<a href="lessons.html">Lessons</a>
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-Building Websites
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<a href="distill.html">Distill</a>
-<a href="blogdown.html">Blogdown</a>
-<a href="blogdown-extras.html">Blogdown Extras</a>
-</div>
-</div>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).on("load", function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      page_category = decodeURIComponent(page_category)
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Lessons">Lessons</h1>
-<a href="lessons/2022-10-18-lesson1-syntax/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 20, 2023</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>1. Basic Syntax</h2>
-<div class="dt-tags"></div>
-<p>In this lesson we will review the basic syntax of R, including defining several common operators.</p>
-</div>
-</a>
-<a href="lessons/2022-10-19-lesson2-variable-types/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 19, 2023</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>2. Variable Types</h2>
-<div class="dt-tags"></div>
-<p>In this lesson we will introduce different types of variables.</p>
-</div>
-</a>
-<a href="lessons/2022-10-20-lesson3-data-structure/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 18, 2023</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>3. Data Structure - Part 1</h2>
-<div class="dt-tags"></div>
-<p>In this lesson we will review different data structures in R, including vectors, matrices, and arrays.</p>
-</div>
-</a>
-<a href="lessons/2023-02-18-lesson4-packages-functions/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 17, 2023</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>4. Packages and Functions</h2>
-<div class="dt-tags"></div>
-<p>In this lesson we will review the basics of packages (including Tidyverse) and functions.</p>
-</div>
-</a>
-<a href="lessons/2023-02-19-lesson5-data-structure2/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 16, 2023</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>5. Data Structure - Part 2</h2>
-<div class="dt-tags"></div>
-<p>In this lesson we will review different data structures in R, including data frames and tibbles.</p>
-</div>
-</a>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Lessons</h1>
+<h1>4. Packages and Functions</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>In this lesson we will review the basics of packages (including
+Tidyverse) and functions.</p></p>
 </div>
 
 
 <div class="d-article">
-<div class="sourceCode" id="cb1"><pre
+<h2 id="packages">Packages</h2>
+<p>A package is a collections of code, data, and documentation all
+bundled together in a standardized way that can be easily shared and
+installed by other R users.</p>
+<ul>
+<li><strong>Installing packages</strong>: when you want to use a package
+for the first time, you must install the package with
+<code>install.packages("package_name")</code> - note the package name
+must be in quotes. You only need to install a package 1 time on your
+local computer, so I suggest using the console to install packages.</li>
+<li><strong>Loading packages/libraries</strong>: every time you start a
+new session, you have to tell R what packages you want to load in. You
+do this with the <code>library(package_name)</code> - note the package
+name does not need to be in quotes here.</li>
+</ul>
+<h3 id="tidyverse">Tidyverse</h3>
+<p>Tidyverse is a package, well it’s actually a collection of 8 packages
+(ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, forcats)
+introduced by Hadley Wickham to help with data manipulation,
+exploration, and visualization.</p>
+<ul>
+<li><p>You can check out <a
+href="https://www.tidyverse.org/packages/">the tidyverse</a> to find out
+more details of each of the individual packages.</p></li>
+<li><p>Whenever you load tidyverse, you’ll see a message saying it’s
+attaching all 8 packages. Therefore, you don’t have to load in any of
+the individual packages because they all get loaded in together. This
+means as long as you load in <code>tidyverse</code>, you can use
+<strong>functions</strong> from any one of the 8 packages.</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># install.packages("tidyverse") # run in console</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h3 id="palmerpenguins">Palmerpenguins</h3>
+<p>As another example, let’s have a look at the
+<code>palmerpenguins</code> package.</p>
+<ul>
+<li>In the <code>palmerpenguins</code> package, there is a dataset
+called <code>penguins</code>. Therefore, when you install and load in
+the package, you will automatically have access to this dataset.</li>
+<li>However, if we try to run <code>penguins</code> before we install or
+load in the package, we will get an error message saying:
+<code>Error: object 'penguins' not found</code>.</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>penguins</span>
+</code></pre>
+</div>
+</div>
+<ul>
+<li>But once we install and load in the <code>palmerpenguins</code>, we
+can see the penguins dataset!</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># install.packages("palmerpenguins")</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://allisonhorst.github.io/palmerpenguins/'>palmerpenguins</a></span><span class='op'>)</span>
+<span class='va'>penguins</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 344 × 8
+   species island    bill_length_mm bill_depth_mm flipper_length_mm
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;
+ 1 Adelie  Torgersen           39.1          18.7               181
+ 2 Adelie  Torgersen           39.5          17.4               186
+ 3 Adelie  Torgersen           40.3          18                 195
+ 4 Adelie  Torgersen           NA            NA                  NA
+ 5 Adelie  Torgersen           36.7          19.3               193
+ 6 Adelie  Torgersen           39.3          20.6               190
+ 7 Adelie  Torgersen           38.9          17.8               181
+ 8 Adelie  Torgersen           39.2          19.6               195
+ 9 Adelie  Torgersen           34.1          18.1               193
+10 Adelie  Torgersen           42            20.2               190
+# … with 334 more rows, and 3 more variables: body_mass_g &lt;int&gt;,
+#   sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+<h3
+id="errors-installing-new-packagewhat-do-you-do-when-you-encounter-errors">Errors
+installing new package…what do you do when you encounter errors?</h3>
+<p>If you are an active R user, I can almost guarantee that sooner or
+later you will run into error messages when trying to install an R
+package. So what do you do when this happens? To see, let’s go through
+an example.</p>
+<p>Let’s say we discovered there’s an <code>emo</code> package that
+let’s us insert emojis and we want to install the package.</p>
+<ol type="1">
+<li>Like any other package, the first thing we do is try to install the
+package in the console with the following code:</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"emo"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<ul>
+<li>Unfortunately, we get a warning message
+<code>package 'emo' is not available for this version of R</code>. At
+first, this may be a little misleading because you may think the issue
+is that you do not have the right version of R.</li>
+<li>But, really the problem is this package does not exist on
+<strong>Comprehensive R Archive Network (CRAN)</strong> and the
+<code>install.packages()</code> function only works for packages that
+are part of CRAN.</li>
+<li>One way to check if the package is part of CRAN is to navigate to
+the Packages tab (by default, this should be located in the bottom right
+panel of RStudio) and type in the package you’re interested in
+installing.</li>
+<li>We can see that <code>emo</code> is not there.</li>
+<li>So, if the package is not part of CRAN, what should you do?</li>
+</ul>
+<ol start="2" type="1">
+<li><p>Turn to Google! I typically go to Google and search “install
+package X in R”.</p></li>
+<li><p>Find the package repository on GitHub. If packages aren’t on
+CRAN, you should be able to find the package repository on GitHub and
+then you can install the package via devtools (another
+package).</p></li>
+</ol>
+<ul>
+<li>When I search for the <code>emo</code> package on Google, this is
+the first link: <a href="https://github.com/hadley/emo">Emo GitHub
+Repository</a>.</li>
+</ul>
+<ol start="4" type="1">
+<li>On the GitHub Repository, scroll down and look for instructions on
+how to install the package.</li>
+</ol>
+<ul>
+<li>The code below is taken directly from the website (note, you do have
+to install the devtools package if you haven’t already done so).</li>
+<li>All you have to do is run this code in your console and you’ll be
+able to install the <code>emo</code> package!</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># install.packages("devtools")</span>
+<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org/reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"hadley/emo"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<ul>
+<li>As a small aside, note that we don’t have to call the library for
+<code>devtools</code> in the code above because we are explicitly
+telling R that the <code>install_github</code> function is from
+(<code>::</code>) the <code>devtools</code> package.</li>
+<li>The code above is identical to running the code in two lines like
+this:</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># install.packages("devtools")</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://devtools.r-lib.org/'>devtools</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://devtools.r-lib.org/reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"hadley/emo"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<ul>
+<li>Let’s test it out our new <code>emo</code> package!</li>
+</ul>
+<p><em>Remember, it’s not enough to install the package. We also have to
+load the library.</em></p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/hadley/emo'>emo</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/emo/man/ji.html'>ji</a></span><span class='op'>(</span><span class='st'>"smile"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>😄 </code></pre>
+</div>
+<ul>
+<li>Finally, I want to share this <a
+href="https://www.littlemissdata.com/blog/r-package-install">installing
+packages blog</a> that I found super helpful, especially this screenshot
+of a flow chart on “Approaching Package Issues Systematically”:</li>
+</ul>
+<p><img src="images/packages-tree-diagram.png" /></p>
+<h2 id="functions">Functions</h2>
+<p>A function is a set of statements (or code) organized to perform a
+specific task. Essentially, a function is like a black box where you
+enter inputs and you get an output. R has a lot of built-in
+functions.</p>
+<p>For example, there’s a <code>mean()</code> function that calculates
+the average of the data you include in the function.</p>
+<ul>
+<li>Here we can easily calculate the mean of
+<code>my_values</code>:</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>my_values</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>10</span>,<span class='fl'>20</span>,<span class='fl'>30</span><span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>my_values</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] 20</code></pre>
+</div>
+<h3 id="arguments">Arguments</h3>
+<p>An argument is the information passed into any given function. In the
+example above we passed in one argument consisting of “my_values”. The
+output returned the average of 10, 20, and 30.</p>
+<p>As another example of this function, let’s say we wanted to get the
+average bill length of the penguins in the palmerpenguins dataset.</p>
+<ul>
+<li>Here, we have to specify the dataset <em>and the column of data</em>
+we want to use in our mean calculation. We can do this by using the
+<code>$</code> operator.</li>
+<li>However, if we run the code below, we get a strange result:</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>penguins</span><span class='op'>$</span><span class='va'>bill_length_mm</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] NA</code></pre>
+</div>
+<ul>
+<li>Why did we get NA? We cannot calculate a mean score if there are NA
+values, so we need to remove these values.</li>
+<li>Fortunately, there is an <strong>argument</strong> that let’s us do
+just that: “na.rm = TRUE” (remove NA = TRUE).</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>penguins</span><span class='op'>$</span><span class='va'>bill_length_mm</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] 43.92193</code></pre>
+</div>
+<ul>
+<li>We can turn to the Help Documentation to see the different arguments
+of a function.</li>
+</ul>
+<h3 id="help-documentation">Help Documentation</h3>
+<ul>
+<li>If you are using a function for the first time, you may not know
+where to start.</li>
+<li>One useful tool is R’s help documentation (the Help tab in the
+bottom right panel).</li>
+<li>You can simply search for the function name to learn more about the
+function. For example, the documentation provides a description, usage,
+arguments, and often even examples.
+<ul>
+<li>As a shortcut You can also type a ? followed by the function name in
+the console. For example, <code>?mean</code> which will take you
+directly to the Help Documentation for the mean function.</li>
+</ul></li>
+</ul>
+<h3 id="mean-help-documentation"><code>mean()</code> Help
+Documentation</h3>
+<ul>
+<li>First, we immediately see the description: “Generic function for the
+(trimmed) arithmetic mean”.</li>
+<li>Then, we can see that the usage says: “mean(x, …)”
+<ul>
+<li>This means that we need to provide an argument for x. If we scroll
+down a bit further we can see that x is defined. Basically, this is
+saying that in order to calculate a mean score, you need to put in some
+data (aka x)</li>
+<li>The <code>...</code> tells us that there are other arguments, but
+they are not required. For example, the “na.rm” is one argument, but it
+is not required.</li>
+</ul></li>
+<li>Next, we see a list of the different possible arguments.</li>
+<li>And if you scroll all the way down to the bottom, you will see
+examples of how to use the function.</li>
+</ul>
+<h3 id="why-use-functions">Why Use functions?</h3>
+<ul>
+<li><p>Functions save us a lot of time! We often rely on functions that
+other people have written. So, while we could have taken the time to
+write our own <code>mean</code> function, there’s no need to because the
+function already exists. It should hopefully be clear from the last
+example how powerful the <code>mean</code> function can be and how much
+time it can save us.</p></li>
+<li><p>You can create your own functions specific to your code and your
+tasks. As a general rule, if you find yourself writing the same code
+more than twice, you should consider writing a function. Using functions
+can reduce your chances of making errors. For example, if you need to
+update your code and you have a function, you only need to update it in
+one place. However, if you have the same code written 5 times, there’s a
+pretty high chance that you’ll forget to update your code somewhere,
+which will result in an error.</p></li>
+<li><p>Although writing your own function is beyond the scope of this
+lesson, here are some useful websites if you wish to learn
+more:</p></li>
+<li><p><a href="https://r4ds.had.co.nz/functions.html">R for Data
+Science: Functions</a></p></li>
+<li><p><a
+href="https://www.r-bloggers.com/2022/04/how-to-create-your-own-functions-in-r/">How
+to create your own functions in R</a></p></li>
+</ul>
+<h2 id="the-end">THE END</h2>
+<div class="sourceCode" id="cb6"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
