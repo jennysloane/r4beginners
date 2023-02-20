@@ -1789,12 +1789,20 @@ each row is a unique observation.</li>
 <li>Just to confirm, we can run the following 2 lines of code to see
 that penguins is both a data frame and a tibble:</li>
 </ul>
+<p><strong>part of tidyverse….</strong></p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>is.data.frame</a></span><span class='op'>(</span><span class='va'>penguins</span><span class='op'>)</span>
-<span class='fu'>is_tibble</span><span class='op'>(</span><span class='va'>penguins</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>is.data.frame</a></span><span class='op'>(</span><span class='va'>penguins</span><span class='op'>)</span>
 </code></pre>
 </div>
+<pre><code>[1] TRUE</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://tibble.tidyverse.org/reference/is_tibble.html'>is_tibble</a></span><span class='op'>(</span><span class='va'>penguins</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] TRUE</code></pre>
 </div>
 <h3 id="so-what-is-special-about-tibbles">So what is special about
 tibbles?</h3>
@@ -1894,14 +1902,13 @@ Volvo 142E             2</code></pre>
 </div>
 <ul>
 <li>However, we can easily use the <code>as_tibble()</code> function to
-convert it to a tibble. <strong>part of tidyverse….</strong>
+convert it to a tibble.</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
-<span class='fu'><a href='https://tibble.tidyverse.org/reference/as_tibble.html'>as_tibble</a></span><span class='op'>(</span><span class='va'>mtcars</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://tibble.tidyverse.org/reference/as_tibble.html'>as_tibble</a></span><span class='op'>(</span><span class='va'>mtcars</span><span class='op'>)</span>
 </code></pre>
-</div></li>
-</ul>
+</div>
 <pre><code># A tibble: 32 × 11
      mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -1962,7 +1969,7 @@ data is our <code>names</code> vector (Josh, Jenny, Brandon).</li>
 <li>And just like that, we created our very own 3x3 tibble!</li>
 </ul>
 <h2 id="the-end">THE END</h2>
-<div class="sourceCode" id="cb12"><pre
+<div class="sourceCode" id="cb14"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

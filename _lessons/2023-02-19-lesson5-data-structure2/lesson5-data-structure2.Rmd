@@ -112,7 +112,11 @@ penguins
 - Because tibbles are a type of data frame, similar to what we saw with the `mtcars` data frame, each column is a variable and each row is a unique observation. 
 - Just to confirm, we can run the following 2 lines of code to see that penguins is both a data frame and a tibble:
 
-```{r eval=FALSE}
+**part of tidyverse....**
+
+```{r}
+library(tidyverse)
+
 is.data.frame(penguins)
 is_tibble(penguins)
 ```
@@ -134,9 +138,8 @@ mtcars
 ```
 
 - However, we can easily use the `as_tibble()` function to convert it to a tibble. 
-**part of tidyverse....**
+
 ```{r}
-library(tidyverse)
 as_tibble(mtcars)
 ```
 
