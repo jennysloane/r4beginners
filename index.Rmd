@@ -29,10 +29,7 @@ $\checkmark$ [Getting Started](https://r4beginners.com/getting_started.html): I 
 $\checkmark$ [Lessons](https://r4beginners.com/lessons.html): The lessons are designed for beginners and we make sure to cover all of the basics and fundamentals. <br>
 $\checkmark$ [Building Websites](https://r4beginners.com/distill.html): Do you want to apply your new R skills and build your own website? Check out the tutorials to help you build a website using the `distill` or `blogdown` package.
 
-
-Want to support r4beginners? <a href="https://www.buymeacoffee.com/r4beginners" target="_blank"><img src="images/buymeacoffee_logo.png" alt="Buy Me A Coffee" height="35"></a> 
-
-
+ 
 <!-- Want to support r4beginners? <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="r4beginners" data-color="#619b8a" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script> -->
 
 <div class="license">
@@ -40,3 +37,5 @@ Want to support r4beginners? <a href="https://www.buymeacoffee.com/r4beginners" 
 </div>
 
 *Please note - this website is still being developed, so stay tuned for more lessons and tutorials!*
+
+Want to support r4beginners? <a href="https://www.buymeacoffee.com/r4beginners" target="_blank"><img src="images/buymeacoffee_logo.png" alt="Buy Me A Coffee" height="35"></a>
