@@ -30,6 +30,11 @@ $\checkmark$ [Lessons](https://r4beginners.com/lessons.html): The lessons are de
 $\checkmark$ [Building Websites](https://r4beginners.com/distill.html): Do you want to apply your new R skills and build your own website? Check out the tutorials to help you build a website using the `distill` or `blogdown` package.
 
 
+Want to support r4beginners? <a href="https://www.buymeacoffee.com/r4beginners" target="_blank"><img src="images/buymeacoffee_logo.png" alt="Buy Me A Coffee" height="35"></a> 
+
+
+<!-- Want to support r4beginners? <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="r4beginners" data-color="#619b8a" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script> -->
+
 <div class="license">
 **License and Citation:** You can use, share, modify, and adapt any of the tutorials or lessons, but please include the following attribution: *R4Beginners. (May 30, 2022). Zenodo. [https://doi.org/10.5281/zenodo.6595406](https://doi.org/10.5281/zenodo.6595406)*
 </div>

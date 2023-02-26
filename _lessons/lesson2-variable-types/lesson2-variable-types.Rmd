@@ -2,11 +2,14 @@
 title: "2. Variable Types"
 description: |
    In this lesson we will introduce different types of variables.
-# author:
-#   - name: Jenny Sloane
-date: 2023-02-19
+author:
+  - name: "Jenny Sloane"
+# date: 2023-02-19
 output:
   distill::distill_article:
+    toc: true
+    toc_depth: 3
+    toc_float: true
     self_contained: false
 ---
 
