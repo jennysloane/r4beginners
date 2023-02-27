@@ -94,8 +94,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2023-02-21"/>
-  <meta property="article:created" itemprop="dateCreated" content="2023-02-21"/>
+  <meta property="article:published" itemprop="datePublished" content="2023-02-27"/>
+  <meta property="article:created" itemprop="dateCreated" content="2023-02-27"/>
   <meta name="article:author" content="Jenny Sloane"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -113,7 +113,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","output","date"]}},"value":[{"type":"character","attributes":{},"value":["2. Variable Types"]},{"type":"character","attributes":{},"value":["In this lesson we will introduce different types of variables.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Jenny Sloane"]}]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["02-21-2023"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","output","date"]}},"value":[{"type":"character","attributes":{},"value":["2. Variable Types"]},{"type":"character","attributes":{},"value":["In this lesson we will introduce different types of variables.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Jenny Sloane"]}]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["02-27-2023"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -189,6 +189,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1261,15 +1262,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
         }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -1489,7 +1496,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"2. Variable Types","description":"In this lesson we will introduce different types of variables.","authors":[{"author":"Jenny Sloane","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2023-02-21T00:00:00.000-06:00","citationText":"Sloane, 2023"}
+{"title":"2. Variable Types","description":"In this lesson we will introduce different types of variables.","authors":[{"author":"Jenny Sloane","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2023-02-27T00:00:00.000-06:00","citationText":"Sloane, 2023"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1502,14 +1509,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>2. Variable Types</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>In this lesson we will introduce different types of
-variables.</p></p>
+<p><p>In this lesson we will introduce different types of variables.</p></p>
 </div>
 
 <div class="d-byline">
   Jenny Sloane  
   
-<br/>02-21-2023
+<br/>02-27-2023
 </div>
 
 <div class="d-article">
@@ -1525,76 +1531,59 @@ variables.</p></p>
 <li><a href="#logical">Logical</a></li>
 </ul></li>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#the-end">THE END</a></li>
+<li><a href="#the-end">THE END 🎉</a></li>
 </ul>
 </nav>
 </div>
-<p>In this lesson we will introduce different types of variables,
-including character, numeric, integer, logical.</p>
+<p>In this lesson we will introduce different types of variables, including character, numeric, integer, logical.</p>
 <h2 id="types-of-variables">Types of Variables</h2>
 <h3 id="character">Character</h3>
 <ul>
-<li><p>A character is a type of <em>class</em> that contains a string of
-characters. For example, a name is a string of characters (or
-letters).</p></li>
-<li><p>In the example below, I’ve saved my name “Jenny” to a variable
-I’ve called “my_char”.</p></li>
+<li><p>A character is a type of <em>class</em> that contains a string of characters. For example, a name is a string of characters (or letters).</p></li>
+<li><p>In the example below, I’ve saved my name “Jenny” to a variable I’ve called “my_char”.</p></li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>my_char</span> <span class='op'>&lt;-</span> <span class='st'>"Jenny"</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>my_char</span> <span class='op'>&lt;-</span> <span class='st'>"Jenny"</span></span></code></pre>
 </div>
 </div>
 <ul>
-<li>To check what type of variable you have, you can use the
-<code>class()</code> function</li>
-<li>All we have to do is insert our variable (my_char) within the
-parentheses of our function</li>
+<li>To check what type of variable you have, you can use the <code>class()</code> function</li>
+<li>All we have to do is insert our variable (my_char) within the parentheses of our function</li>
 </ul>
-<p><em>Note, we will review functions in a following lesson, but for now
-just run the below line of code and see what gets returned</em></p>
+<p><em>Note, we will review functions in a following lesson, but for now just run the below line of code and see what gets returned</em></p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>my_char</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>my_char</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>[1] &quot;character&quot;</code></pre>
 </div>
 <ul>
-<li><p>As you can see, R returned the word “character” as we may have
-expected</p></li>
-<li><p>We can also use the <code>is.character()</code> function to check
-if our variable is a character. This function will return either TRUE or
-FALSE</p></li>
+<li><p>As you can see, R returned the word “character” as we may have expected</p></li>
+<li><p>We can also use the <code>is.character()</code> function to check if our variable is a character. This function will return either TRUE or FALSE</p></li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/character.html'>is.character</a></span><span class='op'>(</span><span class='va'>my_char</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/character.html'>is.character</a></span><span class='op'>(</span><span class='va'>my_char</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>[1] TRUE</code></pre>
 </div>
 <h3 id="numeric">Numeric</h3>
 <ul>
-<li>Numeric is a type of <em>class</em> that contains whole numbers
-<em>or</em> numbers with decimals</li>
+<li>Numeric is a type of <em>class</em> that contains whole numbers <em>or</em> numbers with decimals</li>
 <li>Let’s test out a couple of examples</li>
-<li>We will first assign a number to a new variable (my_num1 or
-my_num2)</li>
+<li>We will first assign a number to a new variable (my_num1 or my_num2)</li>
 <li>And then we’ll ask R to print (or return) the value for us</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>my_num1</span> <span class='op'>&lt;-</span> <span class='fl'>22</span> <span class='co'># my favorite number!</span>
-<span class='va'>my_num1</span> 
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>my_num1</span> <span class='op'>&lt;-</span> <span class='fl'>22</span> <span class='co'># my favorite number!</span></span>
+<span><span class='va'>my_num1</span> </span></code></pre>
 </div>
 <pre><code>[1] 22</code></pre>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>my_num2</span> <span class='op'>&lt;-</span> <span class='fl'>22.22</span>
-<span class='va'>my_num2</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>my_num2</span> <span class='op'>&lt;-</span> <span class='fl'>22.22</span></span>
+<span><span class='va'>my_num2</span></span></code></pre>
 </div>
 <pre><code>[1] 22.22</code></pre>
 </div>
@@ -1603,13 +1592,11 @@ my_num2)</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>my_num1</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>my_num1</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>[1] &quot;numeric&quot;</code></pre>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>my_num2</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>my_num2</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>[1] &quot;numeric&quot;</code></pre>
 </div>
@@ -1618,78 +1605,60 @@ my_num2)</li>
 </ul>
 <h3 id="integer">Integer</h3>
 <ul>
-<li>An integer is a type of <em>class</em> that contains <em>only</em>
-whole numbers</li>
-<li>Of course, this is similar to the numeric class, but without
-decimals. So how does R know if a whole number is numeric or an
-integer?</li>
-<li>By default, R will assign any whole number to the numeric class. We
-observed this above when we saw the class of the number 22 was
-numeric</li>
-<li>However, as we’ll see below, you can convert a numeric class to an
-integer using the <code>as.integer()</code> function</li>
+<li>An integer is a type of <em>class</em> that contains <em>only</em> whole numbers</li>
+<li>Of course, this is similar to the numeric class, but without decimals. So how does R know if a whole number is numeric or an integer?</li>
+<li>By default, R will assign any whole number to the numeric class. We observed this above when we saw the class of the number 22 was numeric</li>
+<li>However, as we’ll see below, you can convert a numeric class to an integer using the <code>as.integer()</code> function</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>my_int1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/integer.html'>as.integer</a></span><span class='op'>(</span><span class='fl'>22</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>my_int1</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>my_int1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/integer.html'>as.integer</a></span><span class='op'>(</span><span class='fl'>22</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>my_int1</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>[1] &quot;integer&quot;</code></pre>
 </div>
 <ul>
-<li>But, what happens if we try to convert a number with a decimal to an
-integer?</li>
+<li>But, what happens if we try to convert a number with a decimal to an integer?</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>my_int2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/integer.html'>as.integer</a></span><span class='op'>(</span><span class='fl'>22.22</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>my_int2</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>my_int2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/integer.html'>as.integer</a></span><span class='op'>(</span><span class='fl'>22.22</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>my_int2</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>[1] &quot;integer&quot;</code></pre>
 </div>
 <ul>
 <li>This works! It has successfully converted 22.22 to an integer</li>
-<li>However, it is important to note that 22.22 was forced to become a
-whole number</li>
-<li>So, if we look at my_int2, it is now the whole number 22 rather than
-the decimal 22.22</li>
+<li>However, it is important to note that 22.22 was forced to become a whole number</li>
+<li>So, if we look at my_int2, it is now the whole number 22 rather than the decimal 22.22</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>my_int2</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>my_int2</span></span></code></pre>
 </div>
 <pre><code>[1] 22</code></pre>
 </div>
 <h3 id="logical">Logical</h3>
 <ul>
-<li>Logical is a special type of <em>class</em> that contains only two
-possible values: TRUE or FALSE</li>
-<li>Please note that the logical values must be written in all caps with
-no quotes</li>
+<li>Logical is a special type of <em>class</em> that contains only two possible values: TRUE or FALSE</li>
+<li>Please note that the logical values must be written in all caps with no quotes</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>log1</span> <span class='op'>&lt;-</span> <span class='cn'>TRUE</span>
-<span class='va'>log2</span> <span class='op'>&lt;-</span> <span class='cn'>FALSE</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>log1</span> <span class='op'>&lt;-</span> <span class='cn'>TRUE</span></span>
+<span><span class='va'>log2</span> <span class='op'>&lt;-</span> <span class='cn'>FALSE</span></span></code></pre>
 </div>
 </div>
 <ul>
-<li>Once again, we’ll check the classes of the variables we’ve just
-created</li>
+<li>Once again, we’ll check the classes of the variables we’ve just created</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>log1</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>log1</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>[1] &quot;logical&quot;</code></pre>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>log2</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>log2</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>[1] &quot;logical&quot;</code></pre>
 </div>
@@ -1698,25 +1667,21 @@ created</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>log3</span> <span class='op'>&lt;-</span> <span class='st'>"TRUE"</span>
-<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>log3</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>log3</span> <span class='op'>&lt;-</span> <span class='st'>"TRUE"</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>log3</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>[1] &quot;character&quot;</code></pre>
 </div>
 <ul>
-<li>Because TRUE is in “” here, by default R assigns this to the
-character class</li>
+<li>Because TRUE is in “” here, by default R assigns this to the character class</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>log4</span> <span class='op'>&lt;-</span> <span class='va'>true</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>log4</span> <span class='op'>&lt;-</span> <span class='va'>true</span></span></code></pre>
 </div>
 </div>
 <ul>
-<li>This example doesn’t even run! R gives us an error here saying
-“object ‘true’ not found”</li>
+<li>This example doesn’t even run! R gives us an error here saying “object ‘true’ not found”</li>
 </ul>
 <h2 id="summary">Summary</h2>
 <ul>
@@ -1725,9 +1690,8 @@ character class</li>
 <li>Integer: Only whole numbers</li>
 <li>Logical: TRUE or FALSE</li>
 </ul>
-<h2 id="the-end">THE END</h2>
-<div class="sourceCode" id="cb13"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h2 id="the-end">THE END 🎉</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

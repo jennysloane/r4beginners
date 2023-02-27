@@ -138,4 +138,4 @@ log4 <- true
 - Integer: Only whole numbers
 - Logical: TRUE or FALSE
 
-## THE END
+## THE END `r emo::ji("tada")` 
