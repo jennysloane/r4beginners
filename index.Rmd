@@ -8,6 +8,8 @@ links:
   #   url: "https://twitter.com/"
   - label: '<i class="fab fa-github"></i> GitHub'
     url: 'https://github.com/jennysloane/r4beginners-lessons target="_blank"'
+  - label: '<i class="fa fa-cloud"></i> Posit Cloud'
+    url: 'https://posit.cloud/content/5501429 target="_blank"'
   - label: '<i class="fas fa-envelope"></i> Contact'
     url: "mailto:jfsloane92@gmail.com"
 output:

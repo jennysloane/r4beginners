@@ -7,6 +7,9 @@ description: |
 date: 2023-02-17
 output:
   distill::distill_article:
+    toc: true
+    toc_depth: 3
+    toc_float: true
     self_contained: false
 ---
 
@@ -21,29 +24,19 @@ A package is a collections of code, data, and documentation all bundled together
 - **Installing packages**: when you want to use a package for the first time, you must install the package with `install.packages("package_name")` - note the package name must be in quotes. You only need to install a package 1 time on your local computer, so I suggest using the console to install packages.
 - **Loading packages/libraries**: every time you start a new session, you have to tell R what packages you want to load in. You do this with the `library(package_name)` - note the package name does not need to be in quotes here.
 
-### Tidyverse
-
-Tidyverse is a package, well it's actually a collection of 8 packages (ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, forcats) introduced by Hadley Wickham to help with data manipulation, exploration, and visualization.
-
-- You can check out [the tidyverse](https://www.tidyverse.org/packages/) to find out more details of each of the individual packages.
-
-- Whenever you load tidyverse, you'll see a message saying it’s attaching all 8 packages. Therefore, you don’t have to load in any of the individual packages because they all get loaded in together. This means as long as you load in `tidyverse`, you can use **functions** from any one of the 8 packages.
-
-```{r}
-# install.packages("tidyverse") # run in console
-
-library(tidyverse)
-```
-
 ### Palmerpenguins 
 
-As another example, let's have a look at the `palmerpenguins` package.
+To start, let's have a look at the `palmerpenguins` package.
 
 - In the `palmerpenguins` package, there is a dataset called `penguins`. Therefore, when you install and load in the package, you will automatically have access to this dataset. 
-- However, if we try to run `penguins` before we install or load in the package, we will get an error message saying: `Error: object 'penguins' not found`.
+- However, if we try to run `penguins` before we install or load in the package, we will get an error message:
 
-```{r eval=FALSE}
+```{r eval=FALSE, echo=FALSE}
 penguins
+```
+
+```{r, echo=FALSE, width = "95%"}
+knitr::include_graphics("images/penguin-error.png")
 ```
 
 - But once we install and load in the `palmerpenguins`, we can see the penguins dataset!
@@ -55,6 +48,21 @@ library(palmerpenguins)
 penguins
 ```
 
+
+### Tidyverse
+
+Tidyverse is a package, well it's actually a collection of 8 packages (ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, forcats) introduced by Hadley Wickham to help with data manipulation, exploration, and visualization.
+
+- You can check out [the tidyverse](https://www.tidyverse.org/packages/){target="_blank"} to find out more details of each of the individual packages.
+
+- Whenever you load tidyverse, you'll see a message saying it’s attaching all 8 packages. Therefore, you don’t have to load in any of the individual packages because they all get loaded in together. This means as long as you load in `tidyverse`, you can use [functions](https://r4beginners.com/lessons/lesson4-packages-functions/#functions){target="_blank"} from any one of the 8 packages.
+
+```{r message=TRUE}
+# install.packages("tidyverse") # run in console
+
+library(tidyverse)
+```
+
 ### Errors installing new package...what do you do when you encounter errors?
 
 If you are an active R user, I can almost guarantee that sooner or later you will run into error messages when trying to install an R package. So what do you do when this happens? To see, let's go through an example.
@@ -63,8 +71,12 @@ Let's say we discovered there's an `emo` package that let's us insert emojis and
 
 1. Like any other package, the first thing we do is try to install the package in the console with the following code:
 
-```{r eval=FALSE}
+```{r eval=FALSE, echo=FALSE}
 install.packages("emo")
+```
+
+```{r, echo=FALSE, out.width = "95%"}
+knitr::include_graphics("images/emo-error.png")
 ```
 
 - Unfortunately, we get a warning message `package 'emo' is not available for this version of R`. At first, this may be a little misleading because you may think the issue is that you do not have the right version of R. 
@@ -76,7 +88,7 @@ install.packages("emo")
 2. Turn to Google! I typically go to Google and search “install package X in R”.
 
 3. Find the package repository on GitHub. If packages aren't on CRAN, you should be able to find the package repository on GitHub and then you can install the package via devtools (another package). 
-  - When I search for the `emo` package on Google, this is the first link: [Emo GitHub Repository](https://github.com/hadley/emo). 
+  - When I search for the `emo` package on Google, this is the first link: [Emo GitHub Repository](https://github.com/hadley/emo){target="_blank"}. 
   
 4. On the GitHub Repository, scroll down and look for instructions on how to install the package. 
 - The code below is taken directly from the website (note, you do have to install the devtools package if you haven't already done so). 
@@ -107,7 +119,9 @@ ji("smile")
 
 - Finally, I want to share this [installing packages blog](https://www.littlemissdata.com/blog/r-package-install) that I found super helpful, especially this screenshot of a flow chart on "Approaching Package Issues Systematically": 
 
-![](images/packages-tree-diagram.png)
+```{r, echo=FALSE, out.width = "95%"}
+knitr::include_graphics("images/packages-tree-diagram.png")
+```
 
 ## Functions
 
@@ -143,16 +157,21 @@ mean(penguins$bill_length_mm)
 mean(penguins$bill_length_mm, na.rm = TRUE)
 ```
 
-- We can turn to the Help Documentation to see the different arguments of a function.
+- We can turn to the help documentation to see the different arguments of a function.
 
 ### Help Documentation
 
 - If you are using a function for the first time, you may not know where to start. 
-- One useful tool is R's help documentation (the Help tab in the bottom right panel).
+- One useful tool is R's help documentation (the help tab in the bottom right panel).
 - You can simply search for the function name to learn more about the function. For example, the documentation provides a description, usage, arguments, and often even examples.
-  - As a shortcut You can also type a ? followed by the function name in the console. For example, `?mean` which will take you directly to the Help Documentation for the mean function. 
+  - As a shortcut you can also type a ? followed by the function name in the console. For example, `?mean` which will take you directly to the help documentation for the mean function. 
 
 ### `mean()` Help Documentation 
+
+
+```{r, echo=FALSE, out.width = "95%"}
+knitr::include_graphics("images/mean-documentation.png")
+```
 
 - First, we immediately see the description: "Generic function for the (trimmed) arithmetic mean".
 - Then, we can see that the usage says: "mean(x, ...)"
@@ -161,7 +180,7 @@ mean(penguins$bill_length_mm, na.rm = TRUE)
 - Next, we see a list of the different possible arguments. 
 - And if you scroll all the way down to the bottom, you will see examples of how to use the function.  
 
-### Why Use functions?
+### Why Use Functions?
 
 - Functions save us a lot of time! We often rely on functions that other people have written. So, while we could have taken the time to write our own `mean` function, there's no need to because the function already exists. It should hopefully be clear from the last example how powerful the `mean` function can be and how much time it can save us. 
 
@@ -172,4 +191,4 @@ mean(penguins$bill_length_mm, na.rm = TRUE)
 - [R for Data Science: Functions](https://r4ds.had.co.nz/functions.html)
 - [How to create your own functions in R](https://www.r-bloggers.com/2022/04/how-to-create-your-own-functions-in-r/)
 
-## THE END
+## THE END `r emo::ji("tada")` 

@@ -103,25 +103,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="In this lesson we will review the basics of packages (including Tidyverse) and functions."/>
 <meta property="og:url" content="https://r4beginners.com/lessons/lesson4-packages-functions/"/>
+<meta property="og:image" content="https://r4beginners.com/lessons/lesson4-packages-functions/images/penguin-error.png"/>
+<meta property="og:image:width" content="564"/>
+<meta property="og:image:height" content="74"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Home"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary"/>
+<meta property="twitter:card" content="summary_large_image"/>
 <meta property="twitter:title" content="Home: 4. Packages and Functions"/>
 <meta property="twitter:description" content="In this lesson we will review the basics of packages (including Tidyverse) and functions."/>
 <meta property="twitter:url" content="https://r4beginners.com/lessons/lesson4-packages-functions/"/>
+<meta property="twitter:image" content="https://r4beginners.com/lessons/lesson4-packages-functions/images/penguin-error.png"/>
+<meta property="twitter:image:width" content="564"/>
+<meta property="twitter:image:height" content="74"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["4. Packages and Functions"]},{"type":"character","attributes":{},"value":["In this lesson we will review the basics of packages (including Tidyverse) and functions."]},{"type":"character","attributes":{},"value":["2023-02-17"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://r4beginners.com/lessons/lesson4-packages-functions/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["4. Packages and Functions"]},{"type":"character","attributes":{},"value":["In this lesson we will review the basics of packages (including Tidyverse) and functions."]},{"type":"character","attributes":{},"value":["2023-02-17"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://r4beginners.com/lessons/lesson4-packages-functions/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["images/packages-tree-diagram.png","lesson4-packages-functions_files/anchor-4.2.2/anchor.min.js","lesson4-packages-functions_files/bowser-1.9.3/bowser.min.js","lesson4-packages-functions_files/distill-2.2.21/template.v2.js","lesson4-packages-functions_files/header-attrs-2.14/header-attrs.js","lesson4-packages-functions_files/jquery-3.6.0/jquery-3.6.0.js","lesson4-packages-functions_files/jquery-3.6.0/jquery-3.6.0.min.js","lesson4-packages-functions_files/jquery-3.6.0/jquery-3.6.0.min.map","lesson4-packages-functions_files/popper-2.6.0/popper.min.js","lesson4-packages-functions_files/tippy-6.2.7/tippy-bundle.umd.min.js","lesson4-packages-functions_files/tippy-6.2.7/tippy-light-border.css","lesson4-packages-functions_files/tippy-6.2.7/tippy.css","lesson4-packages-functions_files/tippy-6.2.7/tippy.umd.min.js","lesson4-packages-functions_files/webcomponents-2.0.0/webcomponents.js","packages-tree-diagram.png"]}
+  {"type":"character","attributes":{},"value":["images/emo-error.png","images/mean-documentation.png","images/packages-tree-diagram.png","images/penguin-error.png","lesson4-packages-functions_files/anchor-4.2.2/anchor.min.js","lesson4-packages-functions_files/bowser-1.9.3/bowser.min.js","lesson4-packages-functions_files/distill-2.2.21/template.v2.js","lesson4-packages-functions_files/header-attrs-2.14/header-attrs.js","lesson4-packages-functions_files/jquery-3.6.0/jquery-3.6.0.js","lesson4-packages-functions_files/jquery-3.6.0/jquery-3.6.0.min.js","lesson4-packages-functions_files/jquery-3.6.0/jquery-3.6.0.min.map","lesson4-packages-functions_files/popper-2.6.0/popper.min.js","lesson4-packages-functions_files/tippy-6.2.7/tippy-bundle.umd.min.js","lesson4-packages-functions_files/tippy-6.2.7/tippy-light-border.css","lesson4-packages-functions_files/tippy-6.2.7/tippy.css","lesson4-packages-functions_files/tippy-6.2.7/tippy.umd.min.js","lesson4-packages-functions_files/webcomponents-2.0.0/webcomponents.js","packages-tree-diagram.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2118,6 +2124,11 @@ d-article code {
  height: 40px !important;
  font-size: 22px !important;
  min-width: 170px !important;
+}
+
+.posts-list .post-preview img {
+    width: 0;
+    display: none;
 }</style>
 <style type="text/css">
 /* base style */
@@ -2341,78 +2352,59 @@ Building Websites
 <h1>4. Packages and Functions</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>In this lesson we will review the basics of packages (including
-Tidyverse) and functions.</p></p>
+<p><p>In this lesson we will review the basics of packages (including Tidyverse) and functions.</p></p>
 </div>
 
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#packages">Packages</a>
+<ul>
+<li><a href="#palmerpenguins">Palmerpenguins</a></li>
+<li><a href="#tidyverse">Tidyverse</a></li>
+<li><a href="#errors-installing-new-packagewhat-do-you-do-when-you-encounter-errors">Errors installing new package…what do you do when you encounter errors?</a></li>
+</ul></li>
+<li><a href="#functions">Functions</a>
+<ul>
+<li><a href="#arguments">Arguments</a></li>
+<li><a href="#help-documentation">Help Documentation</a></li>
+<li><a href="#mean-help-documentation"><code>mean()</code> Help Documentation</a></li>
+<li><a href="#why-use-functions">Why Use Functions?</a></li>
+</ul></li>
+<li><a href="#the-end">THE END 🎉</a></li>
+</ul>
+</nav>
+</div>
 <h2 id="packages">Packages</h2>
-<p>A package is a collections of code, data, and documentation all
-bundled together in a standardized way that can be easily shared and
-installed by other R users.</p>
+<p>A package is a collections of code, data, and documentation all bundled together in a standardized way that can be easily shared and installed by other R users.</p>
 <ul>
-<li><strong>Installing packages</strong>: when you want to use a package
-for the first time, you must install the package with
-<code>install.packages("package_name")</code> - note the package name
-must be in quotes. You only need to install a package 1 time on your
-local computer, so I suggest using the console to install packages.</li>
-<li><strong>Loading packages/libraries</strong>: every time you start a
-new session, you have to tell R what packages you want to load in. You
-do this with the <code>library(package_name)</code> - note the package
-name does not need to be in quotes here.</li>
+<li><strong>Installing packages</strong>: when you want to use a package for the first time, you must install the package with <code>install.packages("package_name")</code> - note the package name must be in quotes. You only need to install a package 1 time on your local computer, so I suggest using the console to install packages.</li>
+<li><strong>Loading packages/libraries</strong>: every time you start a new session, you have to tell R what packages you want to load in. You do this with the <code>library(package_name)</code> - note the package name does not need to be in quotes here.</li>
 </ul>
-<h3 id="tidyverse">Tidyverse</h3>
-<p>Tidyverse is a package, well it’s actually a collection of 8 packages
-(ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, forcats)
-introduced by Hadley Wickham to help with data manipulation,
-exploration, and visualization.</p>
-<ul>
-<li><p>You can check out <a
-href="https://www.tidyverse.org/packages/">the tidyverse</a> to find out
-more details of each of the individual packages.</p></li>
-<li><p>Whenever you load tidyverse, you’ll see a message saying it’s
-attaching all 8 packages. Therefore, you don’t have to load in any of
-the individual packages because they all get loaded in together. This
-means as long as you load in <code>tidyverse</code>, you can use
-<strong>functions</strong> from any one of the 8 packages.</p></li>
-</ul>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># install.packages("tidyverse") # run in console</span>
-
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
-</code></pre>
-</div>
-</div>
 <h3 id="palmerpenguins">Palmerpenguins</h3>
-<p>As another example, let’s have a look at the
-<code>palmerpenguins</code> package.</p>
+<p>To start, let’s have a look at the <code>palmerpenguins</code> package.</p>
 <ul>
-<li>In the <code>palmerpenguins</code> package, there is a dataset
-called <code>penguins</code>. Therefore, when you install and load in
-the package, you will automatically have access to this dataset.</li>
-<li>However, if we try to run <code>penguins</code> before we install or
-load in the package, we will get an error message saying:
-<code>Error: object 'penguins' not found</code>.</li>
+<li>In the <code>palmerpenguins</code> package, there is a dataset called <code>penguins</code>. Therefore, when you install and load in the package, you will automatically have access to this dataset.</li>
+<li>However, if we try to run <code>penguins</code> before we install or load in the package, we will get an error message:</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>penguins</span>
-</code></pre>
-</div>
-</div>
-<ul>
-<li>But once we install and load in the <code>palmerpenguins</code>, we
-can see the penguins dataset!</li>
-</ul>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># install.packages("palmerpenguins")</span>
 
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://allisonhorst.github.io/palmerpenguins/'>palmerpenguins</a></span><span class='op'>)</span>
-<span class='va'>penguins</span>
-</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/penguin-error.png" width="282" /></p>
+</div>
+<ul>
+<li>But once we install and load in the <code>palmerpenguins</code>, we can see the penguins dataset!</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># install.packages("palmerpenguins")</span></span>
+<span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://allisonhorst.github.io/palmerpenguins/'>palmerpenguins</a></span><span class='op'>)</span></span>
+<span><span class='va'>penguins</span></span></code></pre>
 </div>
 <pre><code># A tibble: 344 × 8
    species island    bill_length_mm bill_depth_mm flipper_length_mm
@@ -2430,225 +2422,167 @@ can see the penguins dataset!</li>
 # … with 334 more rows, and 3 more variables: body_mass_g &lt;int&gt;,
 #   sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
 </div>
-<h3
-id="errors-installing-new-packagewhat-do-you-do-when-you-encounter-errors">Errors
-installing new package…what do you do when you encounter errors?</h3>
-<p>If you are an active R user, I can almost guarantee that sooner or
-later you will run into error messages when trying to install an R
-package. So what do you do when this happens? To see, let’s go through
-an example.</p>
-<p>Let’s say we discovered there’s an <code>emo</code> package that
-let’s us insert emojis and we want to install the package.</p>
-<ol type="1">
-<li>Like any other package, the first thing we do is try to install the
-package in the console with the following code:</li>
-</ol>
+<h3 id="tidyverse">Tidyverse</h3>
+<p>Tidyverse is a package, well it’s actually a collection of 8 packages (ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, forcats) introduced by Hadley Wickham to help with data manipulation, exploration, and visualization.</p>
+<ul>
+<li><p>You can check out <a href="https://www.tidyverse.org/packages/" target="_blank">the tidyverse</a> to find out more details of each of the individual packages.</p></li>
+<li><p>Whenever you load tidyverse, you’ll see a message saying it’s attaching all 8 packages. Therefore, you don’t have to load in any of the individual packages because they all get loaded in together. This means as long as you load in <code>tidyverse</code>, you can use <a href="https://r4beginners.com/lessons/lesson4-packages-functions/#functions" target="_blank">functions</a> from any one of the 8 packages.</p></li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"emo"</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># install.packages("tidyverse") # run in console</span></span>
+<span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span></code></pre>
 </div>
+<pre><code>── Attaching packages ───────────────────────────── tidyverse 1.3.1 ──</code></pre>
+<pre><code>✔ ggplot2 3.3.6     ✔ purrr   0.3.4
+✔ tibble  3.1.7     ✔ dplyr   1.0.9
+✔ tidyr   1.2.0     ✔ stringr 1.4.0
+✔ readr   2.1.2     ✔ forcats 0.5.1</code></pre>
+<pre><code>── Conflicts ──────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<h3 id="errors-installing-new-packagewhat-do-you-do-when-you-encounter-errors">Errors installing new package…what do you do when you encounter errors?</h3>
+<p>If you are an active R user, I can almost guarantee that sooner or later you will run into error messages when trying to install an R package. So what do you do when this happens? To see, let’s go through an example.</p>
+<p>Let’s say we discovered there’s an <code>emo</code> package that let’s us insert emojis and we want to install the package.</p>
+<ol type="1">
+<li>Like any other package, the first thing we do is try to install the package in the console with the following code:</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/emo-error.png" width="95%" /></p>
 </div>
 <ul>
-<li>Unfortunately, we get a warning message
-<code>package 'emo' is not available for this version of R</code>. At
-first, this may be a little misleading because you may think the issue
-is that you do not have the right version of R.</li>
-<li>But, really the problem is this package does not exist on
-<strong>Comprehensive R Archive Network (CRAN)</strong> and the
-<code>install.packages()</code> function only works for packages that
-are part of CRAN.</li>
-<li>One way to check if the package is part of CRAN is to navigate to
-the Packages tab (by default, this should be located in the bottom right
-panel of RStudio) and type in the package you’re interested in
-installing.</li>
+<li>Unfortunately, we get a warning message <code>package 'emo' is not available for this version of R</code>. At first, this may be a little misleading because you may think the issue is that you do not have the right version of R.</li>
+<li>But, really the problem is this package does not exist on <strong>Comprehensive R Archive Network (CRAN)</strong> and the <code>install.packages()</code> function only works for packages that are part of CRAN.</li>
+<li>One way to check if the package is part of CRAN is to navigate to the Packages tab (by default, this should be located in the bottom right panel of RStudio) and type in the package you’re interested in installing.</li>
 <li>We can see that <code>emo</code> is not there.</li>
 <li>So, if the package is not part of CRAN, what should you do?</li>
 </ul>
 <ol start="2" type="1">
-<li><p>Turn to Google! I typically go to Google and search “install
-package X in R”.</p></li>
-<li><p>Find the package repository on GitHub. If packages aren’t on
-CRAN, you should be able to find the package repository on GitHub and
-then you can install the package via devtools (another
-package).</p></li>
+<li><p>Turn to Google! I typically go to Google and search “install package X in R”.</p></li>
+<li><p>Find the package repository on GitHub. If packages aren’t on CRAN, you should be able to find the package repository on GitHub and then you can install the package via devtools (another package).</p></li>
 </ol>
 <ul>
-<li>When I search for the <code>emo</code> package on Google, this is
-the first link: <a href="https://github.com/hadley/emo">Emo GitHub
-Repository</a>.</li>
+<li>When I search for the <code>emo</code> package on Google, this is the first link: <a href="https://github.com/hadley/emo" target="_blank">Emo GitHub Repository</a>.</li>
 </ul>
 <ol start="4" type="1">
-<li>On the GitHub Repository, scroll down and look for instructions on
-how to install the package.</li>
+<li>On the GitHub Repository, scroll down and look for instructions on how to install the package.</li>
 </ol>
 <ul>
-<li>The code below is taken directly from the website (note, you do have
-to install the devtools package if you haven’t already done so).</li>
-<li>All you have to do is run this code in your console and you’ll be
-able to install the <code>emo</code> package!</li>
+<li>The code below is taken directly from the website (note, you do have to install the devtools package if you haven’t already done so).</li>
+<li>All you have to do is run this code in your console and you’ll be able to install the <code>emo</code> package!</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># install.packages("devtools")</span>
-<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org/reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"hadley/emo"</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># install.packages("devtools")</span></span>
+<span><span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://remotes.r-lib.org/reference/install_github.html'>install_github</a></span><span class='op'>(</span><span class='st'>"hadley/emo"</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <ul>
-<li>As a small aside, note that we don’t have to call the library for
-<code>devtools</code> in the code above because we are explicitly
-telling R that the <code>install_github</code> function is from
-(<code>::</code>) the <code>devtools</code> package.</li>
-<li>The code above is identical to running the code in two lines like
-this:</li>
+<li>As a small aside, note that we don’t have to call the library for <code>devtools</code> in the code above because we are explicitly telling R that the <code>install_github</code> function is from (<code>::</code>) the <code>devtools</code> package.</li>
+<li>The code above is identical to running the code in two lines like this:</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># install.packages("devtools")</span>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://devtools.r-lib.org/'>devtools</a></span><span class='op'>)</span>
-<span class='fu'><a href='https://devtools.r-lib.org/reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"hadley/emo"</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># install.packages("devtools")</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://devtools.r-lib.org/'>devtools</a></span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://remotes.r-lib.org/reference/install_github.html'>install_github</a></span><span class='op'>(</span><span class='st'>"hadley/emo"</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <ul>
 <li>Let’s test it out our new <code>emo</code> package!</li>
 </ul>
-<p><em>Remember, it’s not enough to install the package. We also have to
-load the library.</em></p>
+<p><em>Remember, it’s not enough to install the package. We also have to load the library.</em></p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/hadley/emo'>emo</a></span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/emo/man/ji.html'>ji</a></span><span class='op'>(</span><span class='st'>"smile"</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/hadley/emo'>emo</a></span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/pkg/emo/man/ji.html'>ji</a></span><span class='op'>(</span><span class='st'>"smile"</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>😄 </code></pre>
 </div>
 <ul>
-<li>Finally, I want to share this <a
-href="https://www.littlemissdata.com/blog/r-package-install">installing
-packages blog</a> that I found super helpful, especially this screenshot
-of a flow chart on “Approaching Package Issues Systematically”:</li>
+<li>Finally, I want to share this <a href="https://www.littlemissdata.com/blog/r-package-install">installing packages blog</a> that I found super helpful, especially this screenshot of a flow chart on “Approaching Package Issues Systematically”:</li>
 </ul>
-<p><img src="images/packages-tree-diagram.png" /></p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/packages-tree-diagram.png" width="95%" /></p>
+</div>
 <h2 id="functions">Functions</h2>
-<p>A function is a set of statements (or code) organized to perform a
-specific task. Essentially, a function is like a black box where you
-enter inputs and you get an output. R has a lot of built-in
-functions.</p>
-<p>For example, there’s a <code>mean()</code> function that calculates
-the average of the data you include in the function.</p>
+<p>A function is a set of statements (or code) organized to perform a specific task. Essentially, a function is like a black box where you enter inputs and you get an output. R has a lot of built-in functions.</p>
+<p>For example, there’s a <code>mean()</code> function that calculates the average of the data you include in the function.</p>
 <ul>
-<li>Here we can easily calculate the mean of
-<code>my_values</code>:</li>
+<li>Here we can easily calculate the mean of <code>my_values</code>:</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>my_values</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>10</span>,<span class='fl'>20</span>,<span class='fl'>30</span><span class='op'>)</span>
-
-<span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>my_values</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>my_values</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>10</span>,<span class='fl'>20</span>,<span class='fl'>30</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>my_values</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>[1] 20</code></pre>
 </div>
 <h3 id="arguments">Arguments</h3>
-<p>An argument is the information passed into any given function. In the
-example above we passed in one argument consisting of “my_values”. The
-output returned the average of 10, 20, and 30.</p>
-<p>As another example of this function, let’s say we wanted to get the
-average bill length of the penguins in the palmerpenguins dataset.</p>
+<p>An argument is the information passed into any given function. In the example above we passed in one argument consisting of “my_values”. The output returned the average of 10, 20, and 30.</p>
+<p>As another example of this function, let’s say we wanted to get the average bill length of the penguins in the palmerpenguins dataset.</p>
 <ul>
-<li>Here, we have to specify the dataset <em>and the column of data</em>
-we want to use in our mean calculation. We can do this by using the
-<code>$</code> operator.</li>
+<li>Here, we have to specify the dataset <em>and the column of data</em> we want to use in our mean calculation. We can do this by using the <code>$</code> operator.</li>
 <li>However, if we run the code below, we get a strange result:</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>penguins</span><span class='op'>$</span><span class='va'>bill_length_mm</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>penguins</span><span class='op'>$</span><span class='va'>bill_length_mm</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>[1] NA</code></pre>
 </div>
 <ul>
-<li>Why did we get NA? We cannot calculate a mean score if there are NA
-values, so we need to remove these values.</li>
-<li>Fortunately, there is an <strong>argument</strong> that let’s us do
-just that: “na.rm = TRUE” (remove NA = TRUE).</li>
+<li>Why did we get NA? We cannot calculate a mean score if there are NA values, so we need to remove these values.</li>
+<li>Fortunately, there is an <strong>argument</strong> that let’s us do just that: “na.rm = TRUE” (remove NA = TRUE).</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>penguins</span><span class='op'>$</span><span class='va'>bill_length_mm</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>penguins</span><span class='op'>$</span><span class='va'>bill_length_mm</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span></code></pre>
 </div>
 <pre><code>[1] 43.92193</code></pre>
 </div>
 <ul>
-<li>We can turn to the Help Documentation to see the different arguments
-of a function.</li>
+<li>We can turn to the help documentation to see the different arguments of a function.</li>
 </ul>
 <h3 id="help-documentation">Help Documentation</h3>
 <ul>
-<li>If you are using a function for the first time, you may not know
-where to start.</li>
-<li>One useful tool is R’s help documentation (the Help tab in the
-bottom right panel).</li>
-<li>You can simply search for the function name to learn more about the
-function. For example, the documentation provides a description, usage,
-arguments, and often even examples.
+<li>If you are using a function for the first time, you may not know where to start.</li>
+<li>One useful tool is R’s help documentation (the help tab in the bottom right panel).</li>
+<li>You can simply search for the function name to learn more about the function. For example, the documentation provides a description, usage, arguments, and often even examples.
 <ul>
-<li>As a shortcut You can also type a ? followed by the function name in
-the console. For example, <code>?mean</code> which will take you
-directly to the Help Documentation for the mean function.</li>
+<li>As a shortcut you can also type a ? followed by the function name in the console. For example, <code>?mean</code> which will take you directly to the help documentation for the mean function.</li>
 </ul></li>
 </ul>
-<h3 id="mean-help-documentation"><code>mean()</code> Help
-Documentation</h3>
+<h3 id="mean-help-documentation"><code>mean()</code> Help Documentation</h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/mean-documentation.png" width="95%" /></p>
+</div>
 <ul>
-<li>First, we immediately see the description: “Generic function for the
-(trimmed) arithmetic mean”.</li>
+<li>First, we immediately see the description: “Generic function for the (trimmed) arithmetic mean”.</li>
 <li>Then, we can see that the usage says: “mean(x, …)”
 <ul>
-<li>This means that we need to provide an argument for x. If we scroll
-down a bit further we can see that x is defined. Basically, this is
-saying that in order to calculate a mean score, you need to put in some
-data (aka x)</li>
-<li>The <code>...</code> tells us that there are other arguments, but
-they are not required. For example, the “na.rm” is one argument, but it
-is not required.</li>
+<li>This means that we need to provide an argument for x. If we scroll down a bit further we can see that x is defined. Basically, this is saying that in order to calculate a mean score, you need to put in some data (aka x)</li>
+<li>The <code>...</code> tells us that there are other arguments, but they are not required. For example, the “na.rm” is one argument, but it is not required.</li>
 </ul></li>
 <li>Next, we see a list of the different possible arguments.</li>
-<li>And if you scroll all the way down to the bottom, you will see
-examples of how to use the function.</li>
+<li>And if you scroll all the way down to the bottom, you will see examples of how to use the function.</li>
 </ul>
-<h3 id="why-use-functions">Why Use functions?</h3>
+<h3 id="why-use-functions">Why Use Functions?</h3>
 <ul>
-<li><p>Functions save us a lot of time! We often rely on functions that
-other people have written. So, while we could have taken the time to
-write our own <code>mean</code> function, there’s no need to because the
-function already exists. It should hopefully be clear from the last
-example how powerful the <code>mean</code> function can be and how much
-time it can save us.</p></li>
-<li><p>You can create your own functions specific to your code and your
-tasks. As a general rule, if you find yourself writing the same code
-more than twice, you should consider writing a function. Using functions
-can reduce your chances of making errors. For example, if you need to
-update your code and you have a function, you only need to update it in
-one place. However, if you have the same code written 5 times, there’s a
-pretty high chance that you’ll forget to update your code somewhere,
-which will result in an error.</p></li>
-<li><p>Although writing your own function is beyond the scope of this
-lesson, here are some useful websites if you wish to learn
-more:</p></li>
-<li><p><a href="https://r4ds.had.co.nz/functions.html">R for Data
-Science: Functions</a></p></li>
-<li><p><a
-href="https://www.r-bloggers.com/2022/04/how-to-create-your-own-functions-in-r/">How
-to create your own functions in R</a></p></li>
+<li><p>Functions save us a lot of time! We often rely on functions that other people have written. So, while we could have taken the time to write our own <code>mean</code> function, there’s no need to because the function already exists. It should hopefully be clear from the last example how powerful the <code>mean</code> function can be and how much time it can save us.</p></li>
+<li><p>You can create your own functions specific to your code and your tasks. As a general rule, if you find yourself writing the same code more than twice, you should consider writing a function. Using functions can reduce your chances of making errors. For example, if you need to update your code and you have a function, you only need to update it in one place. However, if you have the same code written 5 times, there’s a pretty high chance that you’ll forget to update your code somewhere, which will result in an error.</p></li>
+<li><p>Although writing your own function is beyond the scope of this lesson, here are some useful websites if you wish to learn more:</p></li>
+<li><p><a href="https://r4ds.had.co.nz/functions.html">R for Data Science: Functions</a></p></li>
+<li><p><a href="https://www.r-bloggers.com/2022/04/how-to-create-your-own-functions-in-r/">How to create your own functions in R</a></p></li>
 </ul>
-<h2 id="the-end">THE END</h2>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h2 id="the-end">THE END 🎉</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">

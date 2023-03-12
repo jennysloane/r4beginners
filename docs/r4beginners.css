@@ -215,3 +215,8 @@ d-article code {
  font-size: 22px !important;
  min-width: 170px !important;
 }
+
+.posts-list .post-preview img {
+    width: 0;
+    display: none;
+}
