@@ -186,4 +186,56 @@ array(vector, dim = c(2,3,4))
 
 *For more examples check out [this website](https://www.w3schools.com/r/r_vectors.asp).*
 
+## Exercises
+
+1. Create a vector with three names: jennifer, taylor, and miley. Save this vector as `artists`. Print your results.
+
+```{r}
+
+```
+
+What is the class of `artists`?
+
+```{r}
+
+```
+
+2. Create a vector with the three artists heights in inches (Jennifer = 64.57, Taylor = 70.87, Miley = 64.96). Save the vector as `artists_heights`. Make sure to save the heights in the same order as you saved the names.
+
+```{r}
+
+```
+
+What is the class of `artists_heights`?
+
+```{r}
+
+```
+
+3. Create a matrix containing the values 1:10 with 2 rows and 5 columns.
+
+```{r}
+
+```
+
+3. Create a matrix containing the values 1:10 with 5 rows and 2 columns.
+
+```{r}
+
+```
+
+4. Create a matrix containing the values 1:10 with 5 rows and 2 columns, but this time fill in the values by rows (instead of the default which is by column).
+
+```{r}
+
+```
+
+5. *Challenge Exercise* Create a matrix containing the first 10 letters in the alphabet with 5 rows and 2 columns and fill in the values by rows.
+
+Hint: if you get stuck, try to use Google to learn how to print letters of the alphabet in R.
+
+```{r}
+
+```
+
 ## THE END `r emo::ji("tada")` 

@@ -155,25 +155,26 @@ miley <- 64.96
 1. What kind of variables are we dealing with here? Are they characters, numeric, integers, or logical? Once you think you know the answer, in the R Chunk below, use the `class()` function to see if you're right. Test it out with any or all of the artists. 
 
 ```{r}
-
+class(jennifer)
 ```
 
 2. Now, convert Jennifer's height to an integer. What number number is returned? 
 
 ```{r}
-
+as.integer(jennifer)
 ```
 
 3. Save your results to a new variable `jennifer_int`. Do the same steps for Miley and save the result to `miley_int`. 
 
 ```{r}
-
+jennifer_int <- as.integer(jennifer)
+miley_int <- as.integer(miley)
 ```
 
 4. When we're dealing with integers, are Miley and Jennifer the same height?
 
 ```{r}
-
+jennifer_int == miley_int
 ```
 
 5. Create three new variables with each woman's respective full names (first and last). Save your three variables as`jennifer_name`, `taylor_name`, and `miley_name`. 
@@ -181,13 +182,15 @@ miley <- 64.96
 *Hint: ff you get an error that says "object not found", return to the very first R Chunk in this lesson and see how I saved my name.*
 
 ```{r}
-
+jennifer_name <- "Jennifer Lopez"
+taylor_name <- "Taylor Swift"
+miley_name <- "Miley Cyrus"
 ```
 
 What type of variables are these? Test it out with any or all of the artists. 
 
 ```{r}
-
+class(jennifer_name)
 ```
 
 

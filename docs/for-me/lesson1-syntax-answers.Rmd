@@ -163,39 +163,41 @@ We also learned a few useful tips, including how to run R chunks and how to leav
 
 ## Exercises
 
-In this exercise, we'll compare the heights (in inches) of some amazing female artists: Jennifer Lopez, Taylor Swift, and Miley Cyrus.
+In this exercise, we'll compare heights (in inches) of some famous (and incredible) female artists: Jennifer Lopez, Taylor Swift, and Miley Cyrus.
 
 1. Create three variables with each woman's respective height (Jennifer = 64.57, Taylor = 70.87, Miley = 64.96). Save your three variables as `jennifer`, `taylor`, and `miley`. 
 
-*Remember to use the assignment operator and make sure to run each line of code (or the entire code chunk) to make sure we save the variables to the environment.*
+*Remember to use the assignment operator and make sure to run each line of code (or the entire code chunk) to make sure we save the variables to the environment*
 
 ```{r}
-
+jennifer <- 64.57
+taylor <- 70.87
+miley <- 64.96
 ```
 
-2. Is Miley shorter than Taylor? Write 1 line of code that will return the answer as either `TRUE` of `FALSE`.
+2. Is Miley shorter than Taylor? Write 1 line of code that will return the answer as either `TRUE` of `FALSE`
 
 ```{r}
-
+miley < taylor
 ```
 
 3. Are Miley and Jennifer the same heights? 
 
 ```{r}
-
+miley == jennifer
 ```
 
 
-4. Is Miley taller than both Jennifer **and** Taylor? 
+3. Is Miley taller than **both** Jennifer and Taylor? 
 
 ```{r}
-
+miley > jennifer & miley > taylor
 ```
 
-5. Is Miley taller than either Jennifer **or** Taylor? 
+4. Is Miley taller than **either** Jennifer or Taylor? 
 
 ```{r}
-
+miley > jennifer | miley > taylor
 ```
 
 ## THE END `r emo::ji("tada")` 
