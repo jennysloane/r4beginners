@@ -186,6 +186,16 @@ array(vector, dim = c(2,3,4))
 
 *For more examples check out [this website](https://www.w3schools.com/r/r_vectors.asp).*
 
+## Summary 
+
+In this lesson we introduced three types of data structures: vectors, matrices, and arrays. 
+
+- A vector is the simplest type of data structure, where all the elements are the same data type and only has 1 dimension.
+
+- A matrix also only contains elements of the same data type, but it has 2 dimensions.
+
+- An array also only contains elements of the same data type, but an array can be as simple as a vector with 1 dimension or it can be more complex with several dimensions. 
+
 ## Exercises
 
 1. Create a vector with three names: jennifer, taylor, and miley. Save this vector as `artists`. Print your results.

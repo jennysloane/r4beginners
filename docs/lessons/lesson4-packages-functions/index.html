@@ -2374,6 +2374,8 @@ Building Websites
 <li><a href="#mean-help-documentation"><code>mean()</code> Help Documentation</a></li>
 <li><a href="#why-use-functions">Why Use Functions?</a></li>
 </ul></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#exercises">Exercises</a></li>
 <li><a href="#the-end">THE END 🎉</a></li>
 </ul>
 </nav>
@@ -2581,6 +2583,46 @@ Building Websites
 <li><p><a href="https://r4ds.had.co.nz/functions.html">R for Data Science: Functions</a></p></li>
 <li><p><a href="https://www.r-bloggers.com/2022/04/how-to-create-your-own-functions-in-r/">How to create your own functions in R</a></p></li>
 </ul>
+<h2 id="summary">Summary</h2>
+<p>In this lesson we first learned about packages Specifically, we learned how to install packages for the first time and how it’s necessary to “load” in a package using the <code>library()</code> function every time you start a new R session. We also went through an example of what to do when you encounter an error message after running <code>install.packages()</code>.</p>
+<p>We also learned about functions and why we should use functions. Importantly, we introduced R’s Help Documentation, which is a great resource if you are using a function for the first time and not quite sure where to start.</p>
+<h2 id="exercises">Exercises</h2>
+<ol type="1">
+<li>Load in the packages <code>palmerpenguins</code> and <code>tidyverse</code> and print the penguins dataset.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<ol start="2" type="1">
+<li>Notice that when you printed the penguins variable, it printed either in your console or directly below your code, but it did not save the variable in your environment.</li>
+</ol>
+<p>Now, save the penguins dataset to a new variable called <code>penguins_data</code> and then print <code>penguins_data</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<ol start="3" type="1">
+<li>Using the help documentation, look up the function <code>head()</code>. See if you can understand what this function does.</li>
+</ol>
+<p><em>Hint: in the console, use a ? followed by the function name.</em></p>
+<ol start="4" type="1">
+<li>Use the <code>head()</code> on the <code>peguins_data</code>.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<ol start="5" type="1">
+<li>Return to the help documentation for <code>head()</code>. In the description, it mentions a second function that is the opposite of <code>head()</code>, what is that function? Test it out on the <code>penguins_data</code>.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<ol start="6" type="1">
+<li>What is the average flipper length for all of the penguins in our dataset?</li>
+</ol>
+<p><em>If you get stuck, review the example above where we calculate the average bill length.</em></p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
 <h2 id="the-end">THE END 🎉</h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
