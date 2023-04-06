@@ -181,6 +181,60 @@ my_tibble <- tibble(
 my_tibble
 ```
 
-- And just like that, we created our very own 3x3 tibble! 
+- And just like that, we created our very own 3x3 tibble!
+
+## Summary 
+
+In this lesson we learned about data frames and tibbles. Data frames are one of the most common ways of storing data, where each column represents a variable and each row represents an observation. Tibbles are a type of data frame with special features that make it even easier to work with.  
+
+
+## Exercises
+
+1. R has a built-in dataset called `airquality`. Type `airquality` into the R chunk below and run the code to see this data. 
+
+```{r}
+
+```
+
+2. Is this a standard data frame or is this a tibble? Use the `is.data.frame()` and `is_tibble()` functions to confirm.
+
+*Hint: make sure you have the `tidyverse` library loaded before executing the `is_tibble() function.*
+
+```{r}
+
+```
+
+3. Now that we know `airquality` is not a tibble by default, use the `as_tibble()` function to convert it to a one. 
+
+Save this to a new variable called `airquality_tibble`. 
+
+Print `airquality_tibble` to see the results. 
+
+```{r}
+
+```
+
+4. Can you answer the following questions:
+
+- How many columns does this dataset have? 
+- How many rows? 
+- What are the row names?
+- What year are these data points from? *Hint: use the help documentation by typing `?airquality` in the console.*
+
+5. Use the `View()` to view the data in a new tab. 
+
+6. Get the summary results of the wind variable. 
+
+```{r}
+
+```
+
+
+6. Find the average temperature of all the observations in this dataset. 
+
+```{r}
+
+```
+
 
 ## THE END `r emo::ji("tada")` 

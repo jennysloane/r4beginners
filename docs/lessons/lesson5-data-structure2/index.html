@@ -2313,7 +2313,7 @@ gtag('config', 'G-6YZVQBJ008');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"5. Data Structure - Part 2","description":"In this lesson we will review different data structures in R, including data frames and tibbles.","authors":[],"publishedDate":"2023-02-16T00:00:00.000-06:00"}
+{"title":"5. Data Structure - Part 2","description":"In this lesson we will review different data structures in R, including data frames and tibbles.","authors":[],"publishedDate":"2023-02-16T00:00:00.000-05:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2373,6 +2373,8 @@ Building Websites
 <li><a href="#converting-a-data-frame-to-a-tibble">Converting a data frame to a tibble</a></li>
 <li><a href="#create-our-own-tibble">Create our own tibble</a></li>
 </ul></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#exercises">Exercises</a></li>
 <li><a href="#the-end">THE END 🎉</a></li>
 </ul>
 </nav>
@@ -2771,6 +2773,52 @@ Volvo 142E             2</code></pre>
 <ul>
 <li>And just like that, we created our very own 3x3 tibble!</li>
 </ul>
+<h2 id="summary">Summary</h2>
+<p>In this lesson we learned about data frames and tibbles. Data frames are one of the most common ways of storing data, where each column represents a variable and each row represents an observation. Tibbles are a type of data frame with special features that make it even easier to work with.</p>
+<h2 id="exercises">Exercises</h2>
+<ol type="1">
+<li>R has a built-in dataset called <code>airquality</code>. Type <code>airquality</code> into the R chunk below and run the code to see this data.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<ol start="2" type="1">
+<li>Is this a standard data frame or is this a tibble? Use the <code>is.data.frame()</code> and <code>is_tibble()</code> functions to confirm.</li>
+</ol>
+<p><em>Hint: make sure you have the <code>tidyverse</code> library loaded before executing the `is_tibble() function.</em></p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<ol start="3" type="1">
+<li>Now that we know <code>airquality</code> is not a tibble by default, use the <code>as_tibble()</code> function to convert it to a one.</li>
+</ol>
+<p>Save this to a new variable called <code>airquality_tibble</code>.</p>
+<p>Print <code>airquality_tibble</code> to see the results.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<ol start="4" type="1">
+<li>Can you answer the following questions:</li>
+</ol>
+<ul>
+<li>How many columns does this dataset have?</li>
+<li>How many rows?</li>
+<li>What are the row names?</li>
+<li>What year are these data points from? <em>Hint: use the help documentation by typing <code>?airquality</code> in the console.</em></li>
+</ul>
+<ol start="5" type="1">
+<li><p>Use the <code>View()</code> to view the data in a new tab.</p></li>
+<li><p>Get the summary results of the wind variable.</p></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<ol start="6" type="1">
+<li>Find the average temperature of all the observations in this dataset.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
 <h2 id="the-end">THE END 🎉</h2>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
