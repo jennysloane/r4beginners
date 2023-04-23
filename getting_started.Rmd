@@ -14,23 +14,46 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-To begin your coding journey, I recommend watching and following along with the below tutorials. In these tutorials you will:
 
-- Learn how to install R and RStudio
-- Become familiar with the basic setup and structure of RStudio (where we will spend essentially all of our time coding)
-- Learn about *working directories* and *R Projects*
-- Create your first .R and .Rmd scripts and see the differences between the two types of scripts. In our lessons, we will use .Rmd files, but I think it's important to learn about both
-- Get a brief introduction to the world of `tidyverse`
-- Learn about my typical workflow in R, where I also mention a few tips and tricks along the way
+To begin your coding journey, I recommend using either using [Posit Cloud](https://posit.cloud/content/5501429){target="_blank"} or downloading the lessons from [GitHub](https://github.com/jennysloane/r4beginners-lessons){target="_blank"}. In the videos below, I go through both of these methods. 
 
-## Introduction to R 
+I also suggest watching and following along with the Introduction to R tutorial, which is designed for individuals who are new to R and programming in general.
+
+## Getting Started with Posit Cloud
+ 
+- Posit Cloud (previously known as RStudio Cloud) is similar to RStudio Desktop, but runs completely on the cloud. This means you can go through the lessons online without the hassle of downloading and installing R and RStudio. 
+- All of the lessons can be found on [Posit Cloud](https://posit.cloud/content/5501429){target="_blank"}. 
+- This method is recommended for complete beginners.  
+
+VIDEO COMING SOON
+
+## Getting Started with GitHub
+
+- GitHub is a version control and collaboration platform that makes it easy to share code with each other. 
+- All of the lessons can also be found on [GitHub](https://github.com/jennysloane/r4beginners-lessons){target="_blank"} and can be easily downloaded to your local computers. 
+- This method is recommended if you already have R and RStudio installed on your computers.
+
+VIDEO COMING SOON
+
+## Introduction to R Tutorial
+
+In this tutorial you will:
+
+- Learn how to install R and RStudio.
+- Become familiar with the basic setup and structure of RStudio (where we will spend essentially all of our time coding).
+- Learn about *working directories* and *R Projects*.
+- Create your first .R and .Rmd scripts and see the differences between the two types of scripts. In our lessons, we will use .Rmd files, but I think it's important to learn about both.
+
 
 <iframe width="560" height="400" src="https://www.youtube.com/embed/ozgTOQ4bOoI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Introduction to Tidyverse 
 
-<iframe width="560" height="400" src="https://www.youtube.com/embed/CevBDdAgXIc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- - Get a brief introduction to the world of `tidyverse` -->
+<!-- - Learn about my typical workflow in R, where I also mention a few tips and tricks along the way -->
+<!-- ## Introduction to Tidyverse  -->
 
-## My Workflow
+<!-- <iframe width="560" height="400" src="https://www.youtube.com/embed/CevBDdAgXIc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
-<iframe width="560" height="400" src="https://www.youtube.com/embed/TDwJ0Epzq5M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- ## My Workflow -->
+
+<!-- <iframe width="560" height="400" src="https://www.youtube.com/embed/TDwJ0Epzq5M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
