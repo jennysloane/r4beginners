@@ -1884,9 +1884,9 @@
   /* These properties only apply to Distill sites and blogs  */
 
   .distill-site-header {
-    --title-size:       26px;
+    --title-size:       24px;
     --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        26px;
+    --text-size:        24px;
     --hover-color:      white;
     --bkgd-color:       #619B8A;
   }
@@ -2043,6 +2043,12 @@
   .posts-list .post-preview img {
       width: 0;
       display: none;
+  }
+
+  @media screen and (max-width: 1156px){
+  .nav-right{
+    margin-right: 0 !important;
+  }
   }</style>
   <style type="text/css">
   /* base style */
@@ -2231,11 +2237,20 @@
 <div class="nav-right">
 <a href="about.html">About Me</a>
 <a href="getting_started.html">Getting Started</a>
-<a href="https://jsloane.shinyapps.io/Basic-Syntax/">Interactive Lesson</a>
-<a href="lessons.html">Lessons</a>
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
-Building Websites
+Lessons
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="https://jsloane.shinyapps.io/Basic-Syntax">Interactive Lesson</a>
+<a href="lessons.html">Back to Basics</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Websites
  
 <span class="down-arrow">&#x25BE;</span>
 </button>

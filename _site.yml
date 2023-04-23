@@ -26,11 +26,15 @@ navbar:
       href: about.html
     - text: "Getting Started"
       href: getting_started.html
-    - text: "Interactive Lesson"
-      href: 'https://jsloane.shinyapps.io/Basic-Syntax/'
+    # - text: "Interactive Lesson"
+    #   href: 'https://jsloane.shinyapps.io/Basic-Syntax/'
     - text: "Lessons" 
-      href: lessons.html
-    - text: "Building Websites"
+      menu:
+        - text: "Interactive Lesson" # create post "blogdown"
+          href: 'https://jsloane.shinyapps.io/Basic-Syntax'
+        - text: "Back to Basics" 
+          href: lessons.html
+    - text: "Websites"
       menu:
         - text: "Distill" # create post "blogdown"
           href: distill.html 
