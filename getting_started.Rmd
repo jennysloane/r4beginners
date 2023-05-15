@@ -23,17 +23,17 @@ I also suggest watching and following along with the Introduction to R tutorial,
  
 - Posit Cloud (previously known as RStudio Cloud) is similar to RStudio Desktop, but runs completely on the cloud. This means you can go through the lessons online without the hassle of downloading and installing R and RStudio. 
 - All of the lessons can be found on [Posit Cloud](https://posit.cloud/content/5501429){target="_blank"}. 
-- This method is recommended for complete beginners.  
+- **This method is recommended for complete beginners.**  
 
-VIDEO COMING SOON
+<iframe width="560" height="400" src="https://www.youtube.com/embed/tHHhVeQgYOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Getting Started with GitHub
 
 - GitHub is a version control and collaboration platform that makes it easy to share code with each other. 
 - All of the lessons can also be found on [GitHub](https://github.com/jennysloane/r4beginners-lessons){target="_blank"} and can be easily downloaded to your local computers. 
-- This method is recommended if you already have R and RStudio installed on your computers.
+- **This method is recommended if you already have R and RStudio installed on your computers.**
 
-VIDEO COMING SOON
+<iframe width="560" height="400" src="https://www.youtube.com/embed/rFIHjT2whZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Introduction to R Tutorial
 

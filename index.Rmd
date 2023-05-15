@@ -25,7 +25,7 @@ Are you interested in learning how to code in R, but have no idea where to start
 
 <!-- The goal of this website is to make learning R fun and easy! Although many people find the idea of learning how to code to be daunting and overwhelming, it doesn't need to be. With the right resources and tools, coding can be enjoyable and incredibly rewarding!  -->
 
-On this website, you'll find hours of tutorials to help you begin your R coding journey. We will cover everything from introducing you to RStudio, to learning about data frames and different types of variables, to building your own website in R. 
+On this website, you'll find hours of tutorials to help you begin your R coding journey. We'll cover everything from introducing you to RStudio, to learning about data frames and different types of variables, to building your own website in R. 
 
 $\checkmark$ [Getting Started](https://r4beginners.com/getting_started.html): Check out the tutorials in this section to help you get started on your coding journey using Posit Cloud or GitHub. There's also an Introduction to R tutorial that I highly recommend, especially if you are new to programming. <br>
 $\checkmark$ [Lessons](https://r4beginners.com/lessons.html): The lessons are designed for beginners and cover the basics and fundamentals of programming. There's even an [interactive lesson](https://jsloane.shinyapps.io/Basic-Syntax/){target="_blank"} to give you a taste of what it's like to code in R. <br>
@@ -38,6 +38,6 @@ $\checkmark$ [Buildling Websites](https://r4beginners.com/distill.html): Do you 
 **License and Citation:** You can use, share, modify, and adapt any of the tutorials or lessons, but please include the following attribution: *R4Beginners. (May 30, 2022). Zenodo. [https://doi.org/10.5281/zenodo.6595406](https://doi.org/10.5281/zenodo.6595406)*
 </div>
 
-*Please note - this website is still being developed, so stay tuned for more lessons and tutorials!*
+<!-- *Please note - this website is still being developed, so stay tuned for more lessons and tutorials!* -->
 
 Want to support r4beginners? <a href="https://www.buymeacoffee.com/r4beginners" target="_blank"><img src="images/buymeacoffee_logo.png" alt="Buy Me A Coffee" height="35"></a>
