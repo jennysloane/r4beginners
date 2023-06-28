@@ -29,7 +29,7 @@ On this website, you'll find hours of tutorials to help you begin your R coding 
 
 $\checkmark$ [Getting Started](https://r4beginners.com/getting_started.html): Check out the tutorials in this section to help you get started on your coding journey using Posit Cloud or GitHub. There's also an Introduction to R tutorial that I highly recommend, especially if you are new to programming. <br>
 $\checkmark$ [Lessons](https://r4beginners.com/lessons.html): The lessons are designed for beginners and cover the basics and fundamentals of programming. There's even an [interactive lesson](https://jsloane.shinyapps.io/Basic-Syntax/){target="_blank"} to give you a taste of what it's like to code in R. <br>
-$\checkmark$ [Buildling Websites](https://r4beginners.com/distill.html): Do you want to apply your new R skills and build your own website? Check out the tutorials to help you build a website using the `distill` or `blogdown` package.
+$\checkmark$ [Building Websites](https://r4beginners.com/distill.html): Do you want to apply your new R skills and build your own website? Check out the tutorials to help you build a website using the `distill` or `blogdown` package.
 
  
 <!-- Want to support r4beginners? <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="r4beginners" data-color="#619b8a" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script> -->
